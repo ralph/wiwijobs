@@ -1,0 +1,432 @@
+/* Stylesheet
+WiWi Praktikumsbörse
+Start: 20.02.2007 RvdH
+Letzte Aenderung: 09.03.2007 RvdH
+*/
+
+/* @group Allgemein */
+
+/* Reset all */
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+/* for IE6 */
+
+html {
+	height: 100%;
+	font-size: 87.5%;
+}
+
+/* for cool browsers */
+
+html>body {
+	font-size: 14px;
+	line-height: 1.643em;
+}
+
+/* Allgemeines */
+
+body {
+	color: #333;
+	background: url(ofis2/body.gif) repeat-x;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	height: 100%;
+}
+
+em {
+	font-family: helvetica, arial, sans-serif;
+	padding-right: 0.2em;
+}
+
+a:link {
+	color: #333;
+	background-color: #fff;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #333;
+	background-color: #fff;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+img, a img {
+	border: 0;
+}
+
+/* Absaetze */
+
+p {
+	font-size: 1em;
+	line-height: 1.7em;
+	margin: 0.5em 0;
+	clear: both;
+}
+
+/* @end */
+
+/* @group Spezielle Klassen */
+
+/* Kleinerer Text */
+
+.small {
+	font-size: 0.8571em;
+	line-height: 1.66666em;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+/* Links- bzw. Rechtsausrichtung für Elemente */
+
+.leftalign {
+	float: left;
+	margin: 0 0.5em 0 0;
+}
+
+.rightalign {
+	float: right;
+	margin: 0 0 0 0.5em;
+}
+
+/* Clear Class */
+
+.clear {
+	clear: both;
+}
+
+.hidden {
+	display: none;
+}
+
+/* @end */
+
+/* @group Ueberschriften */
+
+h2 {
+	font: normal 1.643em/1.1em georgia, palatino, "Times New Roman", serif;
+	margin: 0.1em 0 0.4em 0;
+}
+
+h3 {
+	font-size: 1.1em;
+	margin: 0.9em 0 0.1em 0;
+	color: #529f25;
+	font-weight: bold;
+}
+
+h4 {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+/* @end */
+
+/* @group Layout */
+
+#wrapper {
+	width: 900px;
+	margin: 0 auto;
+	background: url(ofis2/menu.gif) repeat-y left;
+}
+
+#header {
+	height: 141px;
+	background: url(ofis2/top.gif) repeat-y left;
+}
+
+#topmenu {
+	height: 70px;
+	width: 250px;
+	float: left;
+	padding-top: 13px;
+	padding-right: 30px;
+	margin-left: 250px;
+	display: inline;
+}
+
+#wiwi_schloss {
+	float: right;
+}
+
+#menu {
+	color: #fff;
+	width: 200px;
+	float: left;
+	margin-left: 9px;
+	display: inline;
+	padding-top: 15px;
+        background-color: #666666;
+}
+
+#content {
+	width: 650px;
+	float: right;
+	padding: 15px 0;
+}
+
+#footer {
+	background: #c00 url(ofis2/footer.gif) repeat-x center top;
+	height: 111px;
+	width: 100%;
+}
+
+#footer p {
+	width: 900px;
+	height: 70px;
+	margin: 0 auto;
+	background: url(ofis2/menu_bottom.gif) no-repeat left top;
+	text-align: right;
+	font-size: 0.786em;
+	line-height: 5em;
+	color: #fff;
+}
+
+/* @end */
+
+/* @group Top Menu */
+
+#topmenu ul {
+	list-style-type: none;
+	font-size: 11px;
+	text-align: left;
+}
+
+#topmenu ul li {
+	line-height: 2.26em;
+	color: #fff;
+}
+
+#topmenu ul li a {
+	color: #fff;
+	background-color: #529f25;
+}
+
+/*
+
+ @end */
+
+/* @group Navigation */
+
+#menu ul {
+	padding: 0 16px;
+	width: 168px;
+	list-style-type: none;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+#menu ul li {
+	margin-bottom: 12px;
+	font-size: 1em;
+	line-height: 2em;
+}
+
+#menu ul li a {
+	display: block;
+	width: 100%;
+	cursor: pointer;
+	text-decoration: none;
+	color: #fff;
+	background-color: #666666;
+}
+
+#menu ul li a:hover {
+	background-color: #529f25;
+}
+
+#menu ul li ul {
+	padding: 0;
+}
+
+#menu ul li ul li {
+	margin: 0;
+}
+
+#menu ul li ul li a {
+	padding-left: 10px;
+	width: 158px;
+	font-size: 0.857em;
+	line-height: 1.5em;
+}
+
+/* @end */
+
+/* @group Content */
+
+/* @group Avatar */
+
+.big_avatar {
+	width: 680px;
+}
+
+/* @end */
+
+#content p {
+	font-size: 0.857em;
+}
+
+#content p.small {
+	font-size: 0.714em;
+}
+
+#content div.news_item {
+	background: url(ofis2/separator.gif) no-repeat center bottom;
+	padding-bottom: 20px;
+	margin-bottom: 21px;
+}
+
+.sanscons {
+	background-image: url(/images/icons/bg_rounded.gif);
+	background-color: #529f25;
+}
+
+/* @group Flash and Errors */
+
+#flash_notice, #flash_error, #errorExplanation {
+	color: #000;
+	padding: 4px 6px;
+}
+
+#flash_notice {
+	background-color: #D9FCCE;
+	border: 1px solid #85C86C;
+}
+
+#flash_error, #errorExplanation {
+	background-color: #F3CECD;
+	border: 1px solid #B76967;
+}
+
+#errorExplanation ul li {
+	font-size: 12px;
+	list-style: square;
+	list-style-position: inside;
+	padding-left: 10px;
+}
+
+#content input.invalid, #content textarea.invalid {
+	background-color: #F3CECD;
+	border: 1px solid #B76967;
+}
+
+/* @end */
+
+/*
+
+@group Form Elements */
+
+select {
+	border: 1px solid #cccccc;
+	font-size: 1em;
+	background-color: #fff;
+	margin: 0.4em 0 0;
+	padding: 0.2em;
+}
+
+option {
+		padding-right: 1em;
+}
+
+input, textarea {
+	border: 1px solid #cccccc;
+	line-height: 1.6em;
+	padding: 0.2em;
+	background-color: #fff;
+}
+
+input:hover, textarea:hover, select:hover, input:focus, textarea:focus, select:focus {
+	border: 1px solid #414141;
+}
+
+/* @end */
+
+/* @group Login Styles */
+
+#login_wrapper #content {
+	margin-top: 100px;
+}
+
+#login_body {
+	background-color: #CC0000;
+	background-image: none;
+}
+
+#login_wrapper {
+	width: 450px;
+	border: 10px solid #cccccc;
+	margin: 50px auto;
+	background: #ffffff url(img/logo.gif) no-repeat 40px 50px;
+	padding: 50px 50px 30px;
+}
+
+#login_wrapper .big {
+	font-size: 2em;
+	width: 418px;
+}
+
+#login_wrapper #remember_me, .btns {
+	margin-top: 20px;
+}
+
+/* @end */
+
+/* @group Table */
+
+.content_table {
+	border-bottom: 4px solid #666;
+	margin-top: 20px;
+}
+
+.content_table thead tr th {
+	padding: 3px 8px;
+	background: #d7d4d3;
+}
+
+.content_table tbody tr td {
+	padding: 3px 8px;
+}
+
+.content_table tbody tr td a {
+	background-color: transparent;
+}
+
+.content_table tbody tr.even {
+	background-color: #f2f2f2;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group Opera Bugs */
+
+/* TODO Opera braucht eine feste Höhe, bei den anderen Browsern geht auto. Muss noch irgendwie gefiltert werden! */
+
+#job_category_ids {
+	height: auto;
+	height: 11em;
+}
+
+/* @end */
+
+/* @group Icons */
+.icon { background: url(/images/icons/bg_rounded.gif);}
+.iconb { background: url(/images/icons/bg_roundedb.gif); vertical-align: middle;}
+
+
+.green { background-color: #9c0;} 
+.yellow { background-color: #fc3;}
+.black { background-color: #000;} 
+.orange { background-color: #f63;}
+.red { background-color: #f33;}
+/* @end */

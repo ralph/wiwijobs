@@ -1,0 +1,7 @@
+---
+mode: development
+runs_at_launch: 0
+identifier: wiwijobs
+port: 3007
+bundle: /Applications/Locomotive2/Bundles/rmagickRailsMar2007_i386.locobundle
+server: mongrel

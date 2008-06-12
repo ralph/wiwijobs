@@ -1,0 +1,430 @@
+/* Stylesheet
+WiWi Praktikumsbörse
+Start: 20.02.2007 RvdH
+Letzte Aenderung: 09.03.2007 RvdH
+*/
+
+/* @group Allgemein */
+
+/* Reset all */
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+/* for IE6 */
+
+html {
+	height: 100%;
+	font-size: 87.5%;
+}
+
+/* for cool browsers */
+
+html>body {
+	font-size: 14px;
+	line-height: 1.643em;
+}
+
+/* Allgemeines */
+
+body {
+	color: #333;
+	background: #529f25 url(img/bg_756.png) repeat-y center top;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	height: 100%;
+}
+
+em {
+	font-family: helvetica, arial, sans-serif;
+	padding-right: 0.2em;
+}
+
+a:link {
+	color: #333;
+	background-color: #fff;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #333;
+	background-color: #fff;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+img, a img {
+	border: 0;
+}
+
+/* Absaetze */
+
+p {
+	font-size: 1em;
+	line-height: 1.7em;
+	margin: 0.5em 0;
+	clear: both;
+}
+
+/* @end */
+
+/* @group Spezielle Klassen */
+
+/* Kleinerer Text */
+
+.small {
+	font-size: 0.8571em;
+	line-height: 1.66666em;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+/* Links- bzw. Rechtsausrichtung für Elemente */
+
+.leftalign {
+	float: left;
+	margin: 0 0.5em 0 0;
+}
+
+.rightalign {
+	float: right;
+	margin: 0 0 0 0.5em;
+}
+
+/* Clear Class */
+
+.clear {
+	clear: both;
+}
+
+.hidden {
+	display: none;
+}
+
+/* @end */
+
+/* @group Ueberschriften */
+
+h1#logo {
+	display: block;
+	width: 410px;
+	height: 0px;
+}
+
+h1#logo a {
+	display: block;
+	width: 410px;
+	height: 0px;
+	background: url(img/logo.gif) no-repeat left top;
+	overflow: hidden;
+	padding: 80px 0 0;
+}
+
+h2 {
+	font: normal 1.643em/1.1em georgia, palatino, "Times New Roman", serif;
+	margin: 0.1em 0 0.4em 0;
+}
+
+h3 {
+	font-size: 1.1em;
+	margin: 0.9em 0 0.1em 0;
+	color: #cc0000;
+	font-weight: bold;
+}
+
+h4 {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+/* @end */
+
+/* @group Layout */
+
+#wrapper {
+	min-height: 100%;
+	width: 756px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#header {
+	background: url(img/header_aktuell.jpg) no-repeat center 80px;
+	width: 100%;
+	height: 330px;
+}
+
+#topmenu {
+	height: 70px;
+	width: 250px;
+	float: right;
+	padding-top: 10px;
+	padding-right: 30px;
+}
+
+#navi {
+	background-color: #000000;
+	width: 100%;
+	height: 30px;
+	margin-top: 300px;
+	overflow: visible;
+}
+
+#content {
+	padding: 10px 10px 40px;
+}
+
+#sidebar {
+	
+}
+
+#footer {
+	width: 100%;
+	height: 30px;
+	background-color: #f2f2f2;
+	overflow: hidden;
+	position: absolute;
+	bottom: 0px;
+}
+
+/* @end */
+
+/* @group Top Menu */
+
+#topmenu ul {
+	list-style-type: none;
+	font-size: 10px;
+	text-align: right;
+}
+
+#topmenu ul li {
+	line-height: 1.4em;
+}
+
+/*
+
+ @end */
+
+/* @group Navigation */
+
+#navi ul {
+	
+}
+
+#navi ul li {
+	display: block;
+	float: left;
+	width: 150px;
+	height: 30px;
+	text-align: center;
+	border-right: 1px solid #cccccc;
+}
+
+#navi ul li.last_entry {
+	width: 152px;
+	border-right-style: none;
+}
+
+#navi ul li a {
+	display: block;
+	width: 100%;
+	height: 30px;
+	background-color: #000;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 0.857em;
+	font-weight: bold;
+	line-height: 2.5em;
+	cursor: pointer;
+}
+
+#navi ul li a:hover, #navi ul li a.selected {
+	background-color: #cc0000;
+	text-decoration: none;
+}
+
+#nav ul li ul {
+	display: none;
+}
+
+#navi ul li ul li {
+	border-top: 1px solid #cccccc;
+	border-right-style: none;
+	position: relative;
+}
+
+/* @end */
+
+/* @group Footer */
+
+#footer p {
+	font-size: 0.786em;
+	text-align: center;
+	line-height: 1.8em;
+}
+
+/* @end */
+
+/* @group Content */
+
+/* @group Avatar */
+
+.big_avatar {
+	width: 680px;
+}
+
+/* @end */
+
+#content p {
+	font-size: 0.857em;
+}
+
+#content p.small {
+	font-size: 0.714em;
+}
+
+#content div.news_item {
+	background: url(img/separator.gif) no-repeat center bottom;
+	padding-bottom: 20px;
+	margin-bottom: 21px;
+}
+
+.sanscons {
+	background-image: url(/images/icons/bg_rounded.gif);
+	background-color: #529f25;
+}
+
+/* @group Flash */
+
+#flash_error {
+	background-color: #ffd0d0;
+	border-bottom: 1px solid #cc0000;
+	border-top: 1px solid #cc0000;
+	margin-bottom: 15px;
+	padding: 20px;
+}
+
+#flash_notice {
+	background-color: #cde8d0;
+	border-bottom: 1px solid #00b510;
+	border-top: 1px solid #00b510;
+	margin-bottom: 15px;
+	padding: 20px;
+}
+
+/* @end */
+
+/*
+
+@group Form Elements */
+
+/* @group Error Handling */
+
+.errorExplanation {
+	background-color: #ffd0d0;
+	border-bottom: 1px solid #cc0000;
+	border-top: 1px solid #cc0000;
+	margin-bottom: 15px;
+	padding: 20px;
+}
+
+#content .fieldWithErrors input, #content .fieldWithErrors textarea {
+	background-color: #ffd0d0;
+	border: 1px solid #cc0000;
+}
+
+#errorExplanation ul li {
+	font-size: 12px;
+	list-style: square;
+	list-style-position: inside;
+	padding-left: 10px;
+}
+
+/* @end */
+
+select {
+	border: 1px solid #cccccc;
+	font-size: 1em;
+	background-color: #fff;
+	margin: 0.4em 0 0;
+	padding: 0.2em;
+}
+
+option {
+		padding-right: 1em;
+}
+
+input, textarea {
+	border: 1px solid #cccccc;
+	line-height: 1.6em;
+	padding: 0.2em;
+	background-color: #fff;
+}
+
+input:hover, textarea:hover, select:hover, input:focus, textarea:focus, select:focus {
+	border: 1px solid #414141;
+}
+
+/* @end */
+
+/* @group Login Styles */
+
+#login_wrapper #content {
+	margin-top: 100px;
+}
+
+#login_body {
+	background-color: #529f25;
+	background-image: none;
+}
+
+#login_wrapper {
+	width: 450px;
+	border: 10px solid #cccccc;
+	margin: 50px auto;
+	background: #ffffff url(ofis2/logo.gif) no-repeat 40px 50px;
+	padding: 50px 50px 30px;
+}
+
+#login_wrapper .big {
+	font-size: 2em;
+	width: 418px;
+}
+
+#login_wrapper #remember_me, .btns {
+	margin-top: 20px;
+}
+
+/* @end */
+
+/* @group JobLinks */
+
+.content_table {
+	border-bottom: 4px solid #cccccc;
+	margin-top: 20px;
+}
+
+.content_table tbody tr td {
+	padding: 3px 8px;
+	border-left: 0px solid #D9D9D9;
+}
+
+.content_table tbody tr th {
+	padding: 3px 8px;
+	background: #cccccc;
+}
+
+.content_table tbody tr td a {
+	background-color: transparent;
+}
+
+/* @end */
+
+/* @end */

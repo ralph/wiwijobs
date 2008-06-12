@@ -1,0 +1,44 @@
+<p>Pflichtfelder sind mit Sternchen (*) markiert.</p>
+
+<% fields_for :job_event do |f| %>
+<p>
+	<strong><%= f.label :title, "Titel*" %></strong><br />
+	<%= f.text_field :title %>
+</p>
+
+<p>
+	<strong><%= f.label :description, "Beschreibung*" %></strong><br />
+	<%= f.text_area :description %>
+</p>
+<%= render :partial => "auxiliary/textile_help_links", :object => @job_event %>
+
+<p>
+	<strong><%= f.label :place, "Ort*" %></strong><br />
+	<%= f.text_field :place %>
+</p>
+
+<p>
+	<strong><%= f.label :time, "Datum und Uhrzeit der Veranstaltung" %></strong><br />
+	<%= f.datetime_select :time, :start_year => Time.now.year %>
+</p>
+
+<p>
+	<strong><%= f.label :closing_date_for_applications, "Bewerbungsfrist" %></strong><br />
+	<%= f.datetime_select :closing_date_for_applications, :start_year => Time.now.year, :include_blank => true %>
+</p>
+
+<p>
+	<% fields_for :attachment do |attachment| %>
+	<% if @job_event.attachment %>
+	<strong><%= attachment.label :uploaded_data, "Anhang "+link_to(@job_event.attachment.filename, @job_event.attachment.public_filename)+" ersetzen" %></strong><br />
+	<% else %>
+	<strong><%= attachment.label :uploaded_data, "Anhang auswählen:" %></strong><br />
+	<% end %>
+	<%= attachment.file_field :uploaded_data %>
+	<% end %>
+</p>
+
+<p>
+	<%= submit_tag "Abschicken" %> oder <%= link_to 'Abbrechen', job_events_path %>
+</p>
+<% end %>

@@ -1,0 +1,81 @@
+some_admin:
+    id: 1
+    type: Student
+    login: some_admin
+    email: ralph@rvdh.de
+    salt: b017910595682ee7ce23fe1503092561e054cde0
+    crypted_password: 5af98725f40e60d2aefdd38c0ee25dd69416a998
+    created_at: <%= 5.days.ago.to_s :db %>
+    activation_code: 8f24789ae988411ccf33ab0c30fe9106fab32e9b
+    activated_at: <%= 5.days.ago.to_s :db %>
+    role_id: 1
+    first_name: Heinz
+    last_name: Doof
+
+some_job_admin: 
+    id: 2
+    type: Student
+    login: some_job_admin
+    email: ralph@rvdh.info
+    salt: b017910595682ee7ce23fe1503092561e054cde0
+    crypted_password: 5af98725f40e60d2aefdd38c0ee25dd69416a998
+    created_at: <%= 5.days.ago.to_s :db %>
+    activation_code: 8f24789ae988411ccf33ab0c30fe9106fab32e9b
+    activated_at: <%= 5.days.ago.to_s :db %>
+    role_id: 2
+    first_name: Heinz
+    last_name: Doof
+
+some_student: 
+    id: 3
+    type: Student
+    login: some_student
+    email: ralph@rvdh.net
+    crypted_password: 230eb82d24857a3dd19d703384688ff0f95340a8
+    salt: 87e1948c687e920e1922effea471ad1c65eac750
+    created_at: <%= 1.days.ago.to_s :db %>
+    updated_at: <%= 1.days.ago.to_s :db %>
+    activation_code: 8e7c4af8c1d51c60a3be25e33d687b0c78bb57f0
+    role_id: 3
+    first_name: Heinz
+    last_name: Doof
+  
+some_faculty_user: 
+    id: 4
+    type: Faculty
+    login: some_faculty_user
+    email: ralph@rvdh.org
+    salt: c09af8c3cda1bbbc62d878f8d84dc98f6354ff5f
+    crypted_password: f1e2d7a7c72afe06b6cc2649c0530b350c06681b
+    created_at: <%= 1.days.ago.to_s :db %>
+    activation_code: 8e7c4af8c1d51c60a3be25e33d687b0c78bb57f0
+    activated_at: <%= 1.days.ago.to_s :db %>
+    role_id: 4
+    institution_name: My Faculty
+
+some_company_user:
+    id: 5
+    type: Company
+    login: some_company_user
+    email: ralph@firedesign.de
+    salt: 132fd0b7f4ceb061a0c372569cd8cc8f7b8dd1f9
+    crypted_password: 0729d1398be0bb606dec81bf891c3f694f06bf9f
+    created_at: <%= 1.days.ago.to_s :db %>
+    activation_code: 8f24789ae988411ccf33ab0c30fe9106fab32e9a
+    activated_at: <%= 1.days.ago.to_s :db %>
+    role_id: 5
+    institution_name: My Company
+
+some_other_student: 
+    id: 6
+    type: Student
+    login: some_other_student
+    email: ralphvdh@rvdh.net
+    crypted_password: 230eb82d24857a3dd19d703384688ff0f95340a8
+    salt: 87e1948c687e920e1922effea471ad1c65eac750
+    created_at: <%= 1.days.ago.to_s :db %>
+    updated_at: <%= 1.days.ago.to_s :db %>
+    activation_code: 8e7c4af8c1d51c60a3be25e33d687b0c78bb57f0
+    role_id: 3
+    first_name: Heinz
+    last_name: Doof

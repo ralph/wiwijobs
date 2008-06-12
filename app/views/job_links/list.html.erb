@@ -1,0 +1,13 @@
+<% content_for :headline do %>
+Praktikumslinks
+<% end %>
+
+<div id="text-left" class="einspaltig">
+<% for job_link in @job_links -%>
+<h2><%= job_link.title %></h2>
+<%= job_link.description %>
+<ul class="linklist">
+	<li><%= link_to job_link.title, job_link.target, :target => "_blank" %></li>
+</ul>
+<% end -%>
+</div><!-- #text-left end -->

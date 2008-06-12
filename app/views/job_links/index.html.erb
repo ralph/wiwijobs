@@ -1,0 +1,27 @@
+<h2>Links <%= link_to image_tag("icons/add.gif", :title => "Neuen Link anlegen", :class => "sanscons"), new_job_link_path %></h2>
+
+<table id="job_links" class="content_table">
+	<thead>
+		<tr>
+			<th>Titel</th>
+			<th>Eingestellt von</th>
+			<th>Ziel</th>
+			<th>&nbsp;</th>
+			<th>&nbsp;</th>
+			<th>&nbsp;</th>
+		</tr>
+	</thead>
+
+	<tbody>
+	<% for job_link in @job_links %>
+		<tr class="<%= cycle('odd', 'even') %>">
+			<td><%= link_to job_link.title, edit_job_link_path(job_link), :title => "Link #{job_link.title} bearbeiten" %></td>
+			<td><%= link_to job_link.author.name, user_path(job_link.author) %></td>
+			<td><%= link_to job_link.target, job_link.target %></td>
+			<td><%= link_to image_tag("icons/arrow_up.gif", :title => "Link #{job_link.title} nach oben verschieben", :class => "sanscons"), {:action => "update", :id => job_link, :job_link => {:move_higher => true}}, :method => "put" %></td>
+			<td><%= link_to image_tag("icons/arrow_down.gif", :title => "Link #{job_link.title} nach unten verschieben", :class => "sanscons"), {:action => "update", :id => job_link, :job_link => {:move_lower => true}}, :method => "put" %></td>
+			<td><%= link_to image_tag("icons/trash.gif", :title => "Link #{job_link.title} löschen", :class => "sanscons"), job_link_path(job_link), :confirm => 'Sind Sie sicher?', :method => :delete %></td>
+		</tr>
+	<% end %>
+	</tbody>
+</table>

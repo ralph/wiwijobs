@@ -1,0 +1,39 @@
+<h2>Link Details</h2>
+
+<p>
+	<strong>Titel:</strong>
+	<%=h @job_link.title %>
+</p>
+
+<p>
+	<strong>Beschreibung:</strong>
+	<%= @job_link.description %>
+</p>
+
+<p>
+	<strong>Ziel:</strong>
+	<%= link_to @job_link.target, @job_link.target %>
+</p>
+
+<p>
+	<strong>Autor:</strong>
+	<%=h @job_link.author.name %>
+</p>
+
+<p>
+	<strong>Letzte Bearbeitung von:</strong>
+	<%=h @job_link.last_editor.name %>
+</p>
+
+<p>
+	<strong>Erstellungsdatum:</strong>
+	<%=h @job_link.created_at.to_s(:long) %>
+</p>
+
+<p>
+	<strong>letzte Änderung:</strong>
+	<%=h @job_link.updated_at.to_s(:long) %>
+</p>
+
+<%= link_to 'Link bearbeiten', edit_job_link_path(@job_link) %> |
+<%= link_to 'Zurück zur Liste', job_links_path %>

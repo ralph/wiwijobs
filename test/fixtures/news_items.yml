@@ -1,0 +1,33 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+    id: 1
+    title: MyString
+    text: MyText
+    published_at: 2007-02-25 12:41:59
+    published_until: 2007-02-25 12:41:59
+    author_id: 1
+    last_editor_id: 1
+    created_at: 2007-02-25 12:41:59
+    updated_at: 2007-02-25 12:41:59
+
+two:
+    id: 2
+    title: MyString
+    text: MyText
+    published_at: 2007-02-25 12:41:59
+    published_until: 2007-02-25 12:41:59
+    author_id: 1
+    last_editor_id: 1
+    created_at: 2007-02-25 12:41:59
+    updated_at: 2007-02-25 12:41:59
+
+three:
+    id: 3
+    title: MyString
+    text: MyText
+    published_at: 2007-02-25 12:41:59
+    published_until: 2007-02-25 12:41:59
+    author_id: 1
+    last_editor_id: 1
+    created_at: 2007-02-25 12:41:59
+    updated_at: 2007-02-25 12:41:59

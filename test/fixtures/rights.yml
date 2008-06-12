@@ -1,0 +1,251 @@
+--- 
+rights_047: 
+  name: News
+  action: destroy
+  id: "47"
+  controller: news_items
+rights_036: 
+  name: Jobs
+  action: unpublish
+  id: "36"
+  controller: jobs
+rights_025: 
+  name: Job Events
+  action: create
+  id: "25"
+  controller: job_events
+rights_014: 
+  name: Job Links
+  action: index
+  id: "14"
+  controller: job_links
+rights_003: 
+  name: Benutzer
+  action: new
+  id: "3"
+  controller: users
+rights_048: 
+  name: News
+  action: internal
+  id: "48"
+  controller: news_items
+rights_037: 
+  name: Jobs
+  action: update_all
+  id: "37"
+  controller: jobs
+rights_026: 
+  name: Job Events
+  action: update
+  id: "26"
+  controller: job_events
+rights_015: 
+  name: Job Links
+  action: show
+  id: "15"
+  controller: job_links
+rights_004: 
+  name: Benutzer
+  action: edit
+  id: "4"
+  controller: users
+rights_049: 
+  name: News
+  action: job
+  id: "49"
+  controller: news_items
+rights_038: 
+  name: Jobs
+  action: destroy_all
+  id: "38"
+  controller: jobs
+rights_027: 
+  name: Job Events
+  action: destroy
+  id: "27"
+  controller: job_events
+rights_016: 
+  name: Job Links
+  action: new
+  id: "16"
+  controller: job_links
+rights_005: 
+  name: Benutzer
+  action: create
+  id: "5"
+  controller: users
+rights_050: 
+  name: News
+  action: list
+  id: "50"
+  controller: news_items
+rights_039: 
+  name: Jobs
+  action: publish_all
+  id: "39"
+  controller: jobs
+rights_028: 
+  name: Jobs
+  action: index
+  id: "28"
+  controller: jobs
+rights_017: 
+  name: Job Links
+  action: edit
+  id: "17"
+  controller: job_links
+rights_006: 
+  name: Benutzer
+  action: update
+  id: "6"
+  controller: users
+rights_040: 
+  name: Jobs
+  action: unpublish_all
+  id: "40"
+  controller: jobs
+rights_029: 
+  name: Jobs
+  action: show
+  id: "29"
+  controller: jobs
+rights_018: 
+  name: Job Links
+  action: create
+  id: "18"
+  controller: job_links
+rights_007: 
+  name: Benutzer
+  action: destroy
+  id: "7"
+  controller: users
+rights_041: 
+  name: News
+  action: index
+  id: "41"
+  controller: news_items
+rights_030: 
+  name: Jobs
+  action: new
+  id: "30"
+  controller: jobs
+rights_019: 
+  name: Job Links
+  action: update
+  id: "19"
+  controller: job_links
+rights_008: 
+  name: Benutzer
+  action: update_user_type_specific_fields
+  id: "8"
+  controller: users
+rights_042: 
+  name: News
+  action: show
+  id: "42"
+  controller: news_items
+rights_031: 
+  name: Jobs
+  action: edit
+  id: "31"
+  controller: jobs
+rights_020: 
+  name: Job Links
+  action: destroy
+  id: "20"
+  controller: job_links
+rights_009: 
+  name: Benutzer
+  action: update_all
+  id: "9"
+  controller: users
+rights_043: 
+  name: News
+  action: new
+  id: "43"
+  controller: news_items
+rights_032: 
+  name: Jobs
+  action: create
+  id: "32"
+  controller: jobs
+rights_021: 
+  name: Job Events
+  action: index
+  id: "21"
+  controller: job_events
+rights_010: 
+  name: Benutzer
+  action: destroy_all
+  id: "10"
+  controller: users
+rights_044: 
+  name: News
+  action: edit
+  id: "44"
+  controller: news_items
+rights_033: 
+  name: Jobs
+  action: update
+  id: "33"
+  controller: jobs
+rights_022: 
+  name: Job Events
+  action: show
+  id: "22"
+  controller: job_events
+rights_011: 
+  name: Benutzer
+  action: students
+  id: "11"
+  controller: users
+rights_045: 
+  name: News
+  action: create
+  id: "45"
+  controller: news_items
+rights_034: 
+  name: Jobs
+  action: destroy
+  id: "34"
+  controller: jobs
+rights_023: 
+  name: Job Events
+  action: new
+  id: "23"
+  controller: job_events
+rights_012: 
+  name: Benutzer
+  action: birthday_list
+  id: "12"
+  controller: users
+rights_001: 
+  name: Benutzer
+  action: index
+  id: "1"
+  controller: users
+rights_046: 
+  name: News
+  action: update
+  id: "46"
+  controller: news_items
+rights_035: 
+  name: Jobs
+  action: publish
+  id: "35"
+  controller: jobs
+rights_024: 
+  name: Job Events
+  action: edit
+  id: "24"
+  controller: job_events
+rights_013: 
+  name: Benutzer
+  action: homepage
+  id: "13"
+  controller: users
+rights_002: 
+  name: Benutzer
+  action: show
+  id: "2"
+  controller: users

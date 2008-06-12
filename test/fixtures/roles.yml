@@ -1,0 +1,24 @@
+admin:
+    id: 1
+    name: admin
+    title: Administrator
+
+jobadmin:
+    id: 2
+    name: jobadmin
+    title: Jobbörse Administrator
+
+student: 
+    id: 3
+    name: student
+    title: Fachschaftler
+
+faculty: 
+    id: 4
+    name: faculty
+    title: Fakultät
+
+company:
+    id: 5
+    name: company
+    title: Unternehmensbenutzer

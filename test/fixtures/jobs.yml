@@ -1,0 +1,89 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+unpublished_job:
+    id: 1
+    title: MyString
+    description: MyText
+    company: MyText
+    contact_data: MyText
+    published_until: <%= 2.days.from_now.to_s :db %>
+    place: MyString
+    qualification: MyString
+    salary: false
+    start_time: 2007-02-22 16:33:28
+    end_time: 2007-02-22 16:33:28
+    author_id: 1
+    last_editor_id: 1
+    created_at: 2007-02-22 16:33:28
+    updated_at: 2007-02-22 16:33:28
+
+published_job:
+    id: 2
+    title: MyString
+    description: MyText
+    company: MyText
+    contact_data: MyText
+    published_at: <%= Time.now.to_s :db %>
+    published_until: <%= 2.days.from_now.to_s :db %>
+    place: MyString
+    qualification: MyString
+    salary: false
+    start_time: 2007-02-22 16:33:28
+    end_time: 2007-02-22 16:33:28
+    author_id: 2
+    last_editor_id: 2
+    created_at: 2007-02-22 16:33:28
+    updated_at: 2007-02-22 16:33:28
+
+student_job:
+    id: 3
+    title: MyString
+    description: MyText
+    company: MyText
+    contact_data: MyText
+    published_at: <%= Time.now.to_s :db %>
+    published_until: <%= 2.days.from_now.to_s :db %>
+    place: MyString
+    qualification: MyString
+    salary: false
+    start_time: 2007-02-22 16:33:28
+    end_time: 2007-02-22 16:33:28
+    author_id: 3
+    last_editor_id: 3
+    created_at: 2007-02-22 16:33:28
+    updated_at: 2007-02-22 16:33:28
+
+faculty_job:
+    id: 4
+    title: MyString
+    description: MyText
+    company: MyText
+    contact_data: MyText
+    published_at: <%= Time.now.to_s :db %>
+    published_until: <%= 2.days.from_now.to_s :db %>
+    place: MyString
+    qualification: MyString
+    salary: false
+    start_time: 2007-02-22 16:33:28
+    end_time: 2007-02-22 16:33:28
+    author_id: 4
+    last_editor_id: 4
+    created_at: 2007-02-22 16:33:28
+    updated_at: 2007-02-22 16:33:28
+
+company_job:
+    id: 5
+    title: MyString
+    description: MyText
+    company: MyText
+    contact_data: MyText
+    published_at: <%= Time.now.to_s :db %>
+    published_until: <%= 2.days.from_now.to_s :db %>
+    place: MyString
+    qualification: MyString
+    salary: false
+    start_time: 2007-02-22 16:33:28
+    end_time: 2007-02-22 16:33:28
+    author_id: 5
+    last_editor_id: 5
+    created_at: 2007-02-22 16:33:28
+    updated_at: 2007-02-22 16:33:28

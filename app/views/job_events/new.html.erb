@@ -1,0 +1,7 @@
+<h2>Veranstaltungshinweis anlegen</h2>
+
+<%= error_messages_for :job_event, :attachment %>
+
+<% form_for(:job_event, :url => job_events_path, :html => { :multipart => true }) do |f| %>
+	<%= render :partial => "job_event_form" %>
+<% end %>

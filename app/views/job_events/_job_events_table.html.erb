@@ -1,0 +1,20 @@
+<table id="job_events" class="content_table">
+	<thead>
+		<tr>
+			<th>Titel</th>
+			<th>Eingestellt von</th>
+			<th>Veranstaltungsdatum und -Zeit</th>
+			<th>&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<%- @job_events.each do |job_event| -%>
+		<tr id="<%= dom_id(job_event) %>" class="<%= cycle('odd', 'even') %>">
+			<td><%= link_to job_event.title, edit_job_event_path(job_event), :title => "Veranstaltungshinweis #{job_event.title} bearbeiten" %></td>
+			<td><%= link_to job_event.author.name, user_path(job_event.author) %></td>
+			<td><%=h job_event.time.to_s(:long) %></td>
+			<td><%= link_to image_tag("icons/trash.gif", :title => "Veranstaltungshinweis #{job_event.title} löschen", :class => "sanscons"), job_event_path(job_event), :confirm => 'Sind Sie sicher?', :method => :delete %></td>
+		</tr>
+		<%- end -%>
+	</tbody>
+</table>

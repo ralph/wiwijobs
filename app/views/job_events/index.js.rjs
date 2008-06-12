@@ -1,0 +1,2 @@
+page['job_events'].replace :partial => 'job_events_table', :object => @job_events
+page << flash_notice_via_rjs("Liste aktualisiert")

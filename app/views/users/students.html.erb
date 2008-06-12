@@ -1,0 +1,6 @@
+<h2>FS-Liste</h2>
+
+<p>Filter: <%= select :filter, :to_s, [["alle", "all"], ["Altfachschaft", "bwlvwl"], ["WI-AG","wi"], ["aktuelle","current"], ["ehemalige","former"]], {}, { :id => "users_filter" } %></p>
+<%= observe_field :users_filter, :url => students_users_path, :with => "filter", :method => :get %>
+
+<%= render :partial => "students_table", :object => @users %>

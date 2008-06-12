@@ -1,0 +1,20 @@
+<% content_for :headline do %>
+Aktuelle Veranstaltungshinweise
+<% end %>
+
+<% content_for :footer_left do %>
+<a href="/fakultaet/rss/rss-feed_deutsch.xml" title="RSS-Feed der aktuellen Meldungen"><img src="/images/wiwi/icons/rss-feed.gif" alt="XML" /> RSS-Feed</a>
+<% end %>
+
+<div id="text-left" class="einspaltig">
+<% for job_event in @job_events -%>
+	<h2><%=h job_event.title+" ["+job_event.time.to_s(:long)+"]" %></h2>
+	<%= job_event.description %>
+	<p>
+		<%- unless job_event.place.blank? -%><strong>Ort:</strong> <%=h job_event.place %><br /><%- end -%>
+		<%- unless job_event.closing_date_for_applications.blank? -%><strong>Bewerbungsfrist</strong>: <%=h job_event.closing_date_for_applications %><br /><%- end -%>
+		<%- unless job_event.attachment.blank? -%><strong>Weitere Informationen:</strong> <%= link_to job_event.attachment.filename, job_event.attachment.public_filename %><br /><%- end -%>
+	</p>	
+	<div class="clearall" style="clear:both;"></div>																																		
+<% end -%>
+</div><!-- #text-left end -->

@@ -1,0 +1,12 @@
+<h3>
+	<%= image_tag "wiwi/icons/link1.gif" %>
+	<%= link_to public_job.title+" bei "+public_job.company, job_path(public_job) %>
+</h3>
+<%= public_job.teaser_text %>
+<p>
+	<span class="nowrap noprint">
+		<%= link_to image_tag("wiwi/icons/link2.gif")+" Details anzeigen", job_path(public_job), :title => "Lesen Sie mehr" %>
+		<%= " | "+link_to("Stellenausschreibung herunterladen", public_job.attachment.public_filename) if public_job.attachment %>
+                | <%=h public_job.created_at.to_s(:long) %>
+	</span>
+</p>

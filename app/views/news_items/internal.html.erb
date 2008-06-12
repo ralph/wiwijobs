@@ -1,0 +1,7 @@
+<h2>Die letzten internen Nachrichten</h2>
+
+<% for news_item in @news_items %>
+<h3><%=h news_item.title %></h3>
+<p class="small"><%=h news_item.published_at.to_s(:long) %></p>
+<div class="news_item"><%= news_item.text %></div>
+<% end %>

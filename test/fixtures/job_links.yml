@@ -1,0 +1,33 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+first:
+    id: 1
+    title: First
+    description: MyText
+    target: http://heise.de
+    position: 1
+    author_id: 1
+    last_editor_id: 1
+    created_at: <%= 2.days.ago.to_s :db %>
+    updated_at: <%= 1.days.ago.to_s :db %>
+
+second:
+    id: 2
+    title: Second
+    description: MyText
+    target: http://www.uni-muenster.de
+    position: 2
+    author_id: 2
+    last_editor_id: 2
+    created_at: <%= 2.days.ago.to_s :db %>
+    updated_at: <%= 1.days.ago.to_s :db %>
+
+third:
+    id: 3
+    title: Third
+    description: MyText
+    target: http://www.ruby-lang.org
+    position: 3
+    author_id: 2
+    last_editor_id: 1
+    created_at: <%= 2.days.ago.to_s :db %>
+    updated_at: <%= 1.days.ago.to_s :db %>

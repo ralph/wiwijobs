@@ -1,0 +1,133 @@
+/*
+CODE:		Livingpage® für die Wirtschaftswissenschaftliche Fakultät der Universität Münster
+REVISION:	1.0
+LAST CHANGE:	09.04.06 bm@livingpage.com
+FUNCTION:	In dieser CSS wird das Layout der Seite bestimmt 
+
+CSS nach Typen sortiert. Was wozu gehoert steht im Kommentar davor. 
+
+Getestet auf folgenden Plattformen und Browsern:
+Mac OS X: 
+für gut befunden: Firefox 1.04, Safari 1.3.1
+fehlerhaft: MSIE 5.2.3
+Windows XP: 
+für gut befunden: MSIE 5.0, 5.5, 6.0, Firefox 1.5.0.1, Opera 8.5
+Linux:
+für gut befunden: Linux: Firefox 1.0.7, Konqueror 3.2.1 
+Nicht geeignet fuer NN4.x. (any version, any platform)
+
+Weitere Erklaerungen gibt es bei w3.org/TR/REC-CSS2/
+
+*/
+
+#wrapper {
+    width: 99%;                         /* Totale Breite */
+    margin: 0 auto;
+    text-align: left;
+}
+
+#wiwi_logo  {
+	position: relative;
+}
+
+#wiwi_logo img  {
+	width: 190px;
+}
+
+#wwu_logo img {
+	width: 180px;
+}
+
+#wwu_logo {
+	margin-bottom:10px;
+}
+
+#outer {
+    width: auto;
+    padding-right: 180px;           /* rechte Spaltenbreite */
+    padding-bottom: 0em;
+    padding-left: 190px;            /* linke Spaltenbreite */
+    background-color: #FFF;         /* Mittlere Spaltenfarbe */
+}
+
+#inner {
+    width: 100%;
+    margin: 0;
+}
+
+#left {
+    width: 190px;                   /* linke Spaltenbeite */
+    margin-left: -190px;            /* negative linke Spaltenbreite */
+    float: left;
+    position: relative;
+    z-index: 20;
+    overflow: hidden;
+}
+
+#center {
+    width: 100%;
+    float: left;
+    position: relative;
+    z-index: 12;
+    margin: 0;
+background-color: #E0E8EF;
+/*background-color: #DDEEFF;*/
+}
+
+#right {
+    width: 180px;                    /* rechte Spaltenbreite */
+    margin-right: -180px;            /* negative rechte Spaltenbreite */
+    float: left;
+    position: relative;
+    z-index: 11;
+}
+
+/* Mozilla & Opera code */
+/*#outer > #inner[id] {
+    border: 1px solid transparent;
+    border-width: 0 0 1px 1px;
+}*/
+
+#left[id] {
+    margin-right: 2px;
+}
+
+#center[id] {
+    margin: 0 -2px 0 -2px;
+}
+
+#right[id] {
+    margin-left: 2px;
+}
+
+#right > .inner[class] {
+    width: 180px;
+    overflow: hidden;
+}
+
+#menu {
+    width: 190px;                   /* linke Menübreite */
+}
+
+#main {
+	padding-left: 1em;
+	padding-bottom: 1em;
+    padding-right: 1em;
+	border-right: 1px dashed #ccc;
+	border-left: 1px dashed #ccc;
+	background: url(/images/wiwi/fakultaet/farbschemauni.gif) repeat-x bottom left;
+	min-height: 30em; /* Wird nicht vom MS IE unterstützt und wird mittels CC im MSIE inline geschrieben */
+}
+
+#menu,
+#main {
+    border-top: 1px solid #FFF;         /* fix einen Windows MSIE bug */
+}
+
+#footer {
+    background-color: #FFF;
+}
+
+#adresse, #einrichtungsbezeichnung {
+display: none;
+}

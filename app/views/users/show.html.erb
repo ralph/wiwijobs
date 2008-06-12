@@ -1,0 +1,48 @@
+<h2>Profilseite von <%= @user.name %> <%= link_to image_tag("icons/edit.gif", :alt => "Bearbeiten", :class => "sanscons"), edit_user_path(@user) if current_user.may?("update", @user) %></h2>
+
+<% if @user.avatar: -%>
+	<%= link_to image_tag(@user.avatar.public_filename(:thumb)), @user.avatar.public_filename %>
+<% else -%>
+	<%= image_tag("no_avatar.png") %>
+<% end -%>
+
+<h3>Kontakt</h3>
+<p>
+	E-Mail: <%= mail_to @user.email, nil, :encode => 'hex', :replace_at => "[at]", :replace_dot => "[dot]" %>
+	<%- unless @user.mobile.blank? -%><br />Handy: <%=h @user.mobile %><%- end -%>
+	<%- unless @user.icq.blank? -%><br />ICQ: <%=h @user.icq %><%- end -%>
+	<%- unless @user.homepage.blank? -%><br />Homepage: <%= link_to @user.homepage, @user.homepage %><%- end -%>
+</p>
+
+<%- unless @user.street.blank? and @user.city.blank? and @user.phone.blank? -%>
+<h3>Anschrift</h3>
+<p>
+	<%- unless @user.street.blank? -%><%=h @user.street %><%- end -%>
+	<%- unless @user.city.blank? -%><br /><%=h @user.zip.to_s+" "+@user.city %><%- end -%>
+	<%- unless @user.phone.blank? -%><br /><%=h "Tel: "+@user.phone %><%- end -%>
+</p>
+<%- end -%>
+
+<%- unless (@user.home_street.blank? and @user.home_city.blank? and @user.home_phone.blank?) or (@user[:type] != "Student") -%>
+<h3>Heimatanschrift</h3>
+<p>
+	<%- unless @user.home_street.blank? -%><%=h @user.home_street %><%- end -%>
+	<%- unless @user.home_city.blank? -%><br /><%=h @user.home_zip.to_s+" "+@user.home_city %><%- end -%>
+	<%- unless @user.home_phone.blank? -%><br /><%=h "Tel: "+@user.home_phone %><%- end -%>
+</p>
+<%- end -%>
+
+<%- if @user[:type] == "Student" -%>
+<h3>Daten</h3>
+<p>
+	<%- unless @user.application_date.blank? -%>Eintrittsdatum: <%=h @user.application_date %><%- end -%>
+	<%- unless @user.birthday.blank? -%><br />Geburtstag: <%=h @user.birthday %><%- end -%>
+</p>
+
+<h3>Sonstiges</h3>
+<p>
+	Studiengang: <%=h @user.study_course %><br />
+	Fachschaftler: <%- if @user.opt_out_date.blank? -%>Ja. <%- else -%>Nein.<%- end -%><br />
+	WI-AGler: <%- if !@user.wi_ag_member.blank? -%>Ja. <%- else -%>Nein.<%- end -%>
+</p>
+<%- end -%>

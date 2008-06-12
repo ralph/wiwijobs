@@ -1,0 +1,36 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+current_job_event:
+  id: 1
+  title: MyString
+  description: MyText
+  place: MyString
+  time:  <%= 2.days.from_now.to_s :db %>
+  closing_date_for_applications: 2007-02-21 18:03:49
+  author_id: 1
+  last_editor_id: 1
+  created_at: <%= Time.now.to_s :db %>
+  updated_at: <%= Time.now.to_s :db %>
+
+expired_job_event:
+  id: 2
+  title: MyString
+  description: MyText
+  place: MyString
+  time: <%= 2.days.ago.to_s :db %>
+  closing_date_for_applications: 2007-02-21 18:03:49
+  author_id: 1
+  last_editor_id: 1
+  created_at: <%= Time.now.to_s :db %>
+  updated_at: <%= Time.now.to_s :db %>
+
+other_expired_job_event:
+    id: 3
+    title: MyString
+    description: MyText
+    place: MyString
+    time: <%= 2.days.ago.to_s :db %>
+    closing_date_for_applications: 2007-02-21 18:03:49
+    author_id: 1
+    last_editor_id: 1
+    created_at: <%= Time.now.to_s :db %>
+    updated_at: <%= Time.now.to_s :db %>

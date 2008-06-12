@@ -1,0 +1,15 @@
+page['user_roles'].replace :partial => 'user_roles'
+if @user_type == "Faculty"
+  page['student_fields'].hide
+  page['faculty_and_company_fields'].show
+  page.select('label[for=user_institution_name]').each {|element| element.replace '<label for="user_institution_name">Institutsname</label>'}
+end
+if @user_type == "Company"
+  page['student_fields'].hide
+  page['faculty_and_company_fields'].show
+  page.select('label[for=user_institution_name]').each {|element| element.replace '<label for="user_institution_name">Unternehmensname</label>'}
+end
+if @user_type == "Student"
+  page['student_fields'].show
+  page['faculty_and_company_fields'].hide
+end

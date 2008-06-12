@@ -1,0 +1,6 @@
+<h2>Benutzerverwaltung <%= link_to image_tag("icons/add.gif", :alt => "Neuen Benutzer anlegen", :class => "sanscons"), new_user_path %></h2>
+
+<p>Filter: <%= select :filter, :to_s, [["alle", "all"], ["Studenten", "Student"], ["Fakultäten","Faculty"], ["Unternehmen","Company"]], {}, { :id => "users_filter" } %></p>
+<%= observe_field :users_filter, :url => users_path, :with => "filter", :method => :get %>
+
+<%= render :partial => "users_table", :object => @users %>

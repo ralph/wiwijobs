@@ -1,0 +1,9 @@
+<h2>Link bearbeiten</h2>
+
+<%= user_information_for(@job_link) %>
+
+<%= error_messages_for :job_link %>
+
+<% form_for(:job_link, :url => job_link_path(@job_link), :html => { :method => :put }) do |f| %>
+	<%= render :partial => "job_link_form"%>
+<% end %>

@@ -1,0 +1,21 @@
+<h2>News <%= link_to image_tag("icons/add.gif", :title => "News anlegen", :class => "sanscons"), new_news_item_path %></h2>
+
+<table id="news_items" class="content_table">
+	<thead>
+		<tr>
+			<th>Titel</th>
+			<th>Datum</th>
+			<th>Ablaufdatum</th>
+			<th>&nbsp;</th>
+		</tr>
+	</thead>
+	
+	<%- @news_items.each do |news_item| -%>
+	<tr class="<%= cycle('odd', 'even') %>">
+		<td><%= link_to news_item.title, edit_news_item_path(news_item) %></td>
+		<td><%=h news_item.published_at.to_s(:short) %></td>
+		<td><%=h news_item.published_until.to_s(:short) %></td>
+		<td><%= link_to image_tag("icons/trash.gif", :alt => "Löschen", :class => "sanscons"), news_item_path(news_item), :confirm => 'Sind Sie sicher?', :method => :delete %></td>
+	</tr>
+	<%- end -%>
+</table>
