@@ -1,0 +1,20 @@
+<h2>Benutzerdaten ändern</h2>
+
+<%= error_messages_for :user %>
+
+<% form_for(:user, :url => user_path(@user), :html => { :multipart => true, :method => :put }) do |f| %>
+<%= render :partial => "user_roles" if current_user.has_right?("users", "update_all") %>
+<dl id="essential_fields">
+	<%= render :partial => "general_fields" %>
+</dl>
+
+<%= render :partial => "student_fields" if @user[:type] == "Student" %>
+<%= render :partial => "faculty_and_company_fields" if (@user[:type] == "Faculty" or @user[:type] == "Company") %>
+<%= render :partial => "change_password_fields" %>
+<%= render :partial => "activation_fields" if (current_user.has_right?("users", "update_all") and !@user.activated?) %>
+<%= render :partial => "avatar_fields" %>
+
+<p>
+	<%= submit_tag "Update" %> oder <%= link_to 'Abbrechen', user_path(@user) -%>
+</p>
+<% end %>

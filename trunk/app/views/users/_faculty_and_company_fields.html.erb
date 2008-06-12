@@ -1,0 +1,9 @@
+<% fields_for :user do |f| %>
+<dl id="faculty_and_company_fields">
+	<%- name_label = @user[:type] == "Company" ? "Unternehmensname" : "Institutsname" -%>
+	<dt><%= f.label :institution_name, name_label if current_user.has_right?("users", "update_all")%></dt>
+	<dd><%= f.text_field :institution_name  if current_user.has_right?("users", "update_all")%></dd>
+	<dt><%= f.label :contact_person_name, "Ansprechpartner" %></dt>
+	<dd><%= f.text_field :contact_person_name %></dd>
+</dl>
+<% end %>

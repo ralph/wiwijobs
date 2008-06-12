@@ -1,0 +1,23 @@
+<p>
+	<strong>Titel:</strong>
+	<%=h @news_item.title %>
+</p>
+
+<p>
+	<strong>Text:</strong>
+	<%= @news_item.text %>
+</p>
+
+<p>
+	<strong>Veröffentlicht ab:</strong>
+	<%=h @news_item.published_at.to_s(:long) %>
+</p>
+
+<p>
+	<strong>Veröffentlicht bis:</strong>
+	<%=h @news_item.published_until.to_s(:long) %>
+</p>
+
+
+<%= link_to 'Bearbeiten', edit_news_item_path(@news_item) %> |
+<%= link_to 'zur Liste', news_items_path %>

@@ -1,0 +1,7 @@
+page['job_list'].replace_html :partial => 'public_job', :collection => @jobs
+page.select(".pagination").each {|pagination| pagination.replace ""}
+if will_paginate(@jobs):
+  page['pagination_links'].replace_html :partial => 'job_pages'
+else
+  page['pagination_links'].replace_html ""
+end

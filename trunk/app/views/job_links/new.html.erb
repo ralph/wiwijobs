@@ -1,0 +1,7 @@
+<h2>Neuer Link</h2>
+
+<%= error_messages_for :job_link %>
+
+<% form_for(:job_link, :url => job_links_path) do |f| %>
+	<%= render :partial => "job_link_form"%>
+<% end %>

@@ -1,0 +1,48 @@
+<p>
+	<strong>Titel:</strong>
+	<%=h @job_event.title %>
+</p>
+
+<p>
+	<strong>Beschreibung:</strong>
+	<%= @job_event.description %>
+</p>
+
+<p>
+	<strong>Ort:</strong>
+	<%=h @job_event.place %>
+</p>
+
+<p>
+	<strong>Datum und Zeit:</strong>
+	<%=h @job_event.time.to_s(:long) %>
+</p>
+
+<p>
+	<strong>Bewerbungsfrist:</strong>
+	<%=h @job_event.closing_date_for_applications %>
+</p>
+
+<p>
+	<strong>Autor:</strong>
+	<%=h @job_event.author.name %>
+</p>
+
+<p>
+	<strong>letzte Bearbeitung von:</strong>
+	<%=h @job_event.last_editor.name %>
+</p>
+
+<p>
+	<strong>Erstellt am:</strong>
+	<%=h @job_event.created_at.to_s(:long) %>
+</p>
+
+<p>
+	<strong>letzte Aktualisierung:</strong>
+	<%=h @job_event.updated_at.to_s(:long) %>
+</p>
+
+
+<%= link_to 'Bearbeiten', edit_job_event_path(@job_event) %> |
+<%= link_to 'Zurück zur Liste', job_events_path %>

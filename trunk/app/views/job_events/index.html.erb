@@ -1,0 +1,6 @@
+<h2>Veranstaltungshinweise <%= link_to image_tag("icons/add.gif", :title => "Neuen Veranstaltungshinweis anlegen", :class => "sanscons"), new_job_event_path %></h2>
+
+<p>Filter:<%= select "filter", "filter", [["alle", "all"], ["abgelaufene", "expired"], ["aktuelle","current"]], {}, { :id => "job_events_filter" } %></p>
+<%= observe_field :job_events_filter, :url => job_events_path, :with => "filter", :method => :get %>
+
+<%= render :partial => "job_events_table", :object => @job_events %>

@@ -1,0 +1,490 @@
+--- 
+rights_roles_153: 
+  role_id: "3"
+  right_id: "42"
+rights_roles_125: 
+  role_id: "5"
+  right_id: "29"
+rights_roles_011: 
+  role_id: "1"
+  right_id: "11"
+rights_roles_098: 
+  role_id: "2"
+  right_id: "37"
+rights_roles_154: 
+  role_id: "3"
+  right_id: "43"
+rights_roles_126: 
+  role_id: "5"
+  right_id: "30"
+rights_roles_012: 
+  role_id: "1"
+  right_id: "12"
+rights_roles_040: 
+  role_id: "1"
+  right_id: "20"
+rights_roles_099: 
+  role_id: "2"
+  right_id: "38"
+rights_roles_155: 
+  role_id: "3"
+  right_id: "44"
+rights_roles_127: 
+  role_id: "5"
+  right_id: "31"
+rights_roles_013: 
+  role_id: "1"
+  right_id: "13"
+rights_roles_070: 
+  role_id: "3"
+  right_id: "22"
+rights_roles_041: 
+  role_id: "2"
+  right_id: "14"
+rights_roles_156: 
+  role_id: "3"
+  right_id: "45"
+rights_roles_128: 
+  role_id: "5"
+  right_id: "32"
+rights_roles_042: 
+  role_id: "2"
+  right_id: "15"
+rights_roles_014: 
+  role_id: "2"
+  right_id: "2"
+rights_roles_157: 
+  role_id: "3"
+  right_id: "46"
+rights_roles_129: 
+  role_id: "5"
+  right_id: "33"
+rights_roles_071: 
+  role_id: "3"
+  right_id: "23"
+rights_roles_043: 
+  role_id: "2"
+  right_id: "16"
+rights_roles_015: 
+  role_id: "2"
+  right_id: "4"
+rights_roles_158: 
+  role_id: "3"
+  right_id: "47"
+rights_roles_072: 
+  role_id: "3"
+  right_id: "24"
+rights_roles_044: 
+  role_id: "2"
+  right_id: "17"
+rights_roles_016: 
+  role_id: "2"
+  right_id: "6"
+rights_roles_159: 
+  role_id: "3"
+  right_id: "48"
+rights_roles_073: 
+  role_id: "3"
+  right_id: "25"
+rights_roles_045: 
+  role_id: "2"
+  right_id: "18"
+rights_roles_100: 
+  role_id: "2"
+  right_id: "39"
+rights_roles_017: 
+  role_id: "2"
+  right_id: "13"
+rights_roles_074: 
+  role_id: "3"
+  right_id: "26"
+rights_roles_046: 
+  role_id: "2"
+  right_id: "19"
+rights_roles_101: 
+  role_id: "2"
+  right_id: "40"
+rights_roles_018: 
+  role_id: "2"
+  right_id: "11"
+rights_roles_130: 
+  role_id: "5"
+  right_id: "34"
+rights_roles_075: 
+  role_id: "3"
+  right_id: "27"
+rights_roles_047: 
+  role_id: "2"
+  right_id: "20"
+rights_roles_102: 
+  role_id: "3"
+  right_id: "28"
+rights_roles_019: 
+  role_id: "2"
+  right_id: "12"
+rights_roles_131: 
+  role_id: "5"
+  right_id: "36"
+rights_roles_076: 
+  role_id: "1"
+  right_id: "28"
+rights_roles_048: 
+  role_id: "3"
+  right_id: "14"
+rights_roles_103: 
+  role_id: "3"
+  right_id: "29"
+rights_roles_160: 
+  role_id: "3"
+  right_id: "49"
+rights_roles_132: 
+  role_id: "1"
+  right_id: "41"
+rights_roles_049: 
+  role_id: "3"
+  right_id: "15"
+rights_roles_104: 
+  role_id: "3"
+  right_id: "30"
+rights_roles_077: 
+  role_id: "1"
+  right_id: "29"
+rights_roles_161: 
+  role_id: "3"
+  right_id: "50"
+rights_roles_133: 
+  role_id: "1"
+  right_id: "42"
+rights_roles_105: 
+  role_id: "3"
+  right_id: "31"
+rights_roles_078: 
+  role_id: "1"
+  right_id: "30"
+rights_roles_162: 
+  role_id: "4"
+  right_id: "49"
+rights_roles_134: 
+  role_id: "1"
+  right_id: "43"
+rights_roles_106: 
+  role_id: "3"
+  right_id: "32"
+rights_roles_020: 
+  role_id: "3"
+  right_id: "2"
+rights_roles_079: 
+  role_id: "1"
+  right_id: "31"
+rights_roles_163: 
+  role_id: "5"
+  right_id: "49"
+rights_roles_135: 
+  role_id: "1"
+  right_id: "44"
+rights_roles_107: 
+  role_id: "3"
+  right_id: "33"
+rights_roles_021: 
+  role_id: "3"
+  right_id: "4"
+rights_roles_136: 
+  role_id: "1"
+  right_id: "45"
+rights_roles_108: 
+  role_id: "3"
+  right_id: "34"
+rights_roles_050: 
+  role_id: "3"
+  right_id: "16"
+rights_roles_022: 
+  role_id: "3"
+  right_id: "6"
+rights_roles_137: 
+  role_id: "1"
+  right_id: "46"
+rights_roles_109: 
+  role_id: "3"
+  right_id: "35"
+rights_roles_051: 
+  role_id: "3"
+  right_id: "17"
+rights_roles_023: 
+  role_id: "3"
+  right_id: "13"
+rights_roles_080: 
+  role_id: "1"
+  right_id: "32"
+rights_roles_138: 
+  role_id: "1"
+  right_id: "47"
+rights_roles_052: 
+  role_id: "3"
+  right_id: "18"
+rights_roles_024: 
+  role_id: "3"
+  right_id: "11"
+rights_roles_081: 
+  role_id: "1"
+  right_id: "33"
+rights_roles_139: 
+  role_id: "1"
+  right_id: "48"
+rights_roles_053: 
+  role_id: "3"
+  right_id: "19"
+rights_roles_025: 
+  role_id: "3"
+  right_id: "12"
+rights_roles_054: 
+  role_id: "3"
+  right_id: "20"
+rights_roles_026: 
+  role_id: "4"
+  right_id: "2"
+rights_roles_082: 
+  role_id: "1"
+  right_id: "34"
+rights_roles_055: 
+  role_id: "1"
+  right_id: "21"
+rights_roles_110: 
+  role_id: "3"
+  right_id: "36"
+rights_roles_027: 
+  role_id: "4"
+  right_id: "4"
+rights_roles_083: 
+  role_id: "1"
+  right_id: "35"
+rights_roles_111: 
+  role_id: "3"
+  right_id: "37"
+rights_roles_028: 
+  role_id: "4"
+  right_id: "6"
+rights_roles_084: 
+  role_id: "1"
+  right_id: "36"
+rights_roles_056: 
+  role_id: "1"
+  right_id: "22"
+rights_roles_140: 
+  role_id: "1"
+  right_id: "49"
+rights_roles_112: 
+  role_id: "3"
+  right_id: "38"
+rights_roles_029: 
+  role_id: "4"
+  right_id: "13"
+rights_roles_085: 
+  role_id: "1"
+  right_id: "37"
+rights_roles_057: 
+  role_id: "1"
+  right_id: "23"
+rights_roles_141: 
+  role_id: "1"
+  right_id: "50"
+rights_roles_086: 
+  role_id: "1"
+  right_id: "38"
+rights_roles_058: 
+  role_id: "1"
+  right_id: "24"
+rights_roles_113: 
+  role_id: "3"
+  right_id: "39"
+rights_roles_142: 
+  role_id: "2"
+  right_id: "41"
+rights_roles_087: 
+  role_id: "1"
+  right_id: "39"
+rights_roles_059: 
+  role_id: "1"
+  right_id: "25"
+rights_roles_114: 
+  role_id: "3"
+  right_id: "40"
+rights_roles_143: 
+  role_id: "2"
+  right_id: "42"
+rights_roles_115: 
+  role_id: "4"
+  right_id: "28"
+rights_roles_088: 
+  role_id: "1"
+  right_id: "40"
+rights_roles_001: 
+  role_id: "1"
+  right_id: "1"
+rights_roles_144: 
+  role_id: "2"
+  right_id: "43"
+rights_roles_116: 
+  role_id: "4"
+  right_id: "29"
+rights_roles_030: 
+  role_id: "5"
+  right_id: "2"
+rights_roles_089: 
+  role_id: "2"
+  right_id: "28"
+rights_roles_002: 
+  role_id: "1"
+  right_id: "2"
+rights_roles_145: 
+  role_id: "2"
+  right_id: "44"
+rights_roles_117: 
+  role_id: "4"
+  right_id: "30"
+rights_roles_031: 
+  role_id: "5"
+  right_id: "4"
+rights_roles_003: 
+  role_id: "1"
+  right_id: "3"
+rights_roles_146: 
+  role_id: "2"
+  right_id: "45"
+rights_roles_118: 
+  role_id: "4"
+  right_id: "31"
+rights_roles_032: 
+  role_id: "5"
+  right_id: "6"
+rights_roles_004: 
+  role_id: "1"
+  right_id: "4"
+rights_roles_060: 
+  role_id: "1"
+  right_id: "26"
+rights_roles_147: 
+  role_id: "2"
+  right_id: "46"
+rights_roles_119: 
+  role_id: "4"
+  right_id: "32"
+rights_roles_033: 
+  role_id: "5"
+  right_id: "13"
+rights_roles_005: 
+  role_id: "1"
+  right_id: "5"
+rights_roles_090: 
+  role_id: "2"
+  right_id: "29"
+rights_roles_061: 
+  role_id: "1"
+  right_id: "27"
+rights_roles_148: 
+  role_id: "2"
+  right_id: "47"
+rights_roles_034: 
+  role_id: "1"
+  right_id: "14"
+rights_roles_006: 
+  role_id: "1"
+  right_id: "6"
+rights_roles_091: 
+  role_id: "2"
+  right_id: "30"
+rights_roles_062: 
+  role_id: "2"
+  right_id: "21"
+rights_roles_149: 
+  role_id: "2"
+  right_id: "48"
+rights_roles_007: 
+  role_id: "1"
+  right_id: "7"
+rights_roles_092: 
+  role_id: "2"
+  right_id: "31"
+rights_roles_063: 
+  role_id: "2"
+  right_id: "22"
+rights_roles_035: 
+  role_id: "1"
+  right_id: "15"
+rights_roles_008: 
+  role_id: "1"
+  right_id: "8"
+rights_roles_064: 
+  role_id: "2"
+  right_id: "23"
+rights_roles_036: 
+  role_id: "1"
+  right_id: "16"
+rights_roles_120: 
+  role_id: "4"
+  right_id: "33"
+rights_roles_009: 
+  role_id: "1"
+  right_id: "9"
+rights_roles_093: 
+  role_id: "2"
+  right_id: "32"
+rights_roles_065: 
+  role_id: "2"
+  right_id: "24"
+rights_roles_037: 
+  role_id: "1"
+  right_id: "17"
+rights_roles_121: 
+  role_id: "4"
+  right_id: "34"
+rights_roles_094: 
+  role_id: "2"
+  right_id: "33"
+rights_roles_066: 
+  role_id: "2"
+  right_id: "25"
+rights_roles_038: 
+  role_id: "1"
+  right_id: "18"
+rights_roles_150: 
+  role_id: "2"
+  right_id: "49"
+rights_roles_122: 
+  role_id: "4"
+  right_id: "35"
+rights_roles_095: 
+  role_id: "2"
+  right_id: "34"
+rights_roles_067: 
+  role_id: "2"
+  right_id: "26"
+rights_roles_039: 
+  role_id: "1"
+  right_id: "19"
+rights_roles_151: 
+  role_id: "2"
+  right_id: "50"
+rights_roles_123: 
+  role_id: "4"
+  right_id: "36"
+rights_roles_096: 
+  role_id: "2"
+  right_id: "35"
+rights_roles_068: 
+  role_id: "2"
+  right_id: "27"
+rights_roles_152: 
+  role_id: "3"
+  right_id: "41"
+rights_roles_124: 
+  role_id: "5"
+  right_id: "28"
+rights_roles_097: 
+  role_id: "2"
+  right_id: "36"
+rights_roles_010: 
+  role_id: "1"
+  right_id: "10"
+rights_roles_069: 
+  role_id: "3"
+  right_id: "21"

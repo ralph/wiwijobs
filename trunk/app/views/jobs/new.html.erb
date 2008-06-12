@@ -1,0 +1,7 @@
+<h2>Neues Jobangebot anlegen</h2>
+
+<%= error_messages_for :job, :advertisement %>
+
+<% form_for :job, :url => jobs_path, :html => { :multipart => true } do |f| %>
+	<%= render :partial => "job_form" %>
+<% end %>

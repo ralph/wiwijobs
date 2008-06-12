@@ -1,0 +1,16 @@
+<ul>
+	<% menu_items = menu_builder_for(current_user) %>
+	<% for menu_item in menu_items -%>
+		<% if 1 == menu_item[:submenu_items].length: -%>
+		<li><%= menu_item[:submenu_items][0] %></li>
+		<% elsif 1 < menu_item[:submenu_items].length: -%>
+		<li><%=h menu_item[:label] %>
+			<ul>
+				<% for submenu_item in menu_item[:submenu_items] -%>
+				<li><%= submenu_item %></li>
+				<% end -%>
+			</ul>
+		</li>
+		<% end -%>
+	<% end -%>
+</ul>

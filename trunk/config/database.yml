@@ -1,0 +1,22 @@
+general_data: &general_data
+  adapter: mysql
+  database: wiwijobs_development
+  username: root
+  password: 
+  host: localhost
+  encoding: utf8
+
+development:
+  <<: *general_data
+
+test:
+  database: wiwijobs_test
+  <<: *general_data
+
+production:
+  adapter: mysql
+  database: praktikumsboerse
+  username: praktikumsboerse
+  password: "!Prakti2007*"
+  host: wi-mysql1.uni-muenster.de
+  encoding: utf8

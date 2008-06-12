@@ -1,0 +1,8 @@
+<h2>Stellenangebot bearbeiten</h2>
+<%= user_information_for(@job) %>
+
+<%= error_messages_for :job %>
+
+<% form_for(:job, :url => job_path(@job), :html => { :method => :put, :multipart => true }) do |f| %>
+	<%= render :partial => "job_form" %>
+<% end %>

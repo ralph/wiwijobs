@@ -1,0 +1,9 @@
+<p>
+	<%- lightwindow_include_tag -%>
+	<%= observe_field("#{textile_help_links.class.table_name.singularize}_description", {:url => {:controller => "auxiliary", :action => "textilize"}, :with => "'text=' + encodeURIComponent(value)"}) %>
+	<%= link_to "Formatierungshilfe", "#textile_help", :class => "lightwindow" %>
+	&middot;
+	<%= link_to "Vorschau", "#preview", :class => "lightwindow", :params => "lightwindow_width=750" %>
+	<%= content_tag "div", textile_help_links.description, :id => "preview" %>
+	<%= render :partial => "auxiliary/textile_help" %>
+</p>

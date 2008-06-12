@@ -1,0 +1,3 @@
+page << "$('lightwindow_contents').childElements().without($('lightwindow_loading')).invoke('remove')"
+page.insert_html(:top, "lightwindow_contents", @text)
+page.replace_html("preview", @text)

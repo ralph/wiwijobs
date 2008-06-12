@@ -1,0 +1,7 @@
+<h2>News anlegen</h2>
+
+<%= error_messages_for :news_item %>
+
+<% form_for(:news_item, :url => news_items_path) do |f| %>
+	<%= render :partial => "news_item_form" %>
+<% end %>

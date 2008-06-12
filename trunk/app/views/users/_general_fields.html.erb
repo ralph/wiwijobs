@@ -1,0 +1,14 @@
+<% fields_for :user do |f| %>
+	<dt><%= f.label :email %></dt>
+	<dd><%= f.text_field :email %></dd>
+	<dt><%= f.label :street, "Straße und Hausnummer" %></dt>
+	<dd><%= f.text_field :street %></dd>
+	<dt><%= f.label :zip, "PLZ" %></dt>
+	<dd><%= f.text_field :zip %></dd>
+	<dt><%= f.label :city, "Stadt" %></dt>
+	<dd><%= f.text_field :city %></dd>
+	<dt><%= f.label :phone, "Telefon" %></dt>
+	<dd><%= f.text_field :phone %></dd>
+	<dt><%= f.label :homepage, "Homepage" %></dt>
+	<dd><%= f.text_field :homepage %></dd>
+<% end %>

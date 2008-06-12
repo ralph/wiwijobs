@@ -1,0 +1,248 @@
+/*
+CODE:		Livingpage® für die Wirtschaftswissenschaftliche Fakultät der Universität Münster
+REVISION:	1.0
+LAST CHANGE:	09.04.06 bm@livingpage.com
+FUNCTION:	In dieser CSS werden die Navigationselemente bestimmt
+
+CSS nach Typen sortiert. Was wozu gehoert steht im Kommentar davor. 
+
+Getestet auf folgenden Plattformen und Browsern:
+Mac OS X: 
+für gut befunden: Firefox 1.04, Safari 1.3.1
+fehlerhaft: MSIE 5.2.3
+Windows XP: 
+für gut befunden: MSIE 5.0, 5.5, 6.0, Firefox 1.5.0.1, Opera 8.5
+Linux:
+für gut befunden: Linux: Firefox 1.0.7, Konqueror 3.2.1 
+Nicht geeignet fuer NN4.x. (any version, any platform)
+
+Weitere Erklaerungen gibt es bei w3.org/TR/REC-CSS2/
+
+*/
+
+/* ------------------------------------------------------------------------------- */
+/* ---------------------- Submenu - linke Hauptnavigation  ----------------------- */
+/* ------------------------------------------------------------------------------- */
+
+div#submenu {
+	margin: 0;
+	padding: 0;
+	padding-left: 16px;
+	margin-bottom: 1em;
+}
+
+div#submenu ul {
+	margin: 0;
+	padding: 0;
+    position: relative;
+	margin-top: 1em;
+}
+
+div#submenu li {
+    padding: 0;
+    margin: 0;
+	margin: 0.4em 0 0.4em 0;
+}
+
+div#submenu ul li a  {
+    display: block;
+	background: url(/images/wiwi/icons/link1.gif)  no-repeat left 0.2em;
+	padding-left: 15px;
+}
+
+div#submenu ul li a.active  {
+	font-weight: bold;
+}
+
+div#submenu ul a:hover,
+div#submenu ul a:focus,														
+div#submenu ul a:active {
+    background-color: #FFF;
+    text-decoration: underline;
+}
+
+/* ----------------------  second level ----------------------- */
+
+div#submenu ul ul {
+margin-top: 0;
+    margin-bottom: 0;
+margin-left: 15px;
+
+}
+div#submenu ul ul li a  {
+    display: block;
+	background: url(/images/wiwi/icons/link2_a.gif)  no-repeat left 0.1em;
+	padding-left: 11px;
+}
+
+/* ---------------------- third level ------------------------ */
+
+div#submenu ul ul ul {
+	margin-top: 0;
+    margin-bottom: 0;
+	margin-left: 3px;
+
+}
+div#submenu ul ul ul li a  {
+    display: block;
+	background: url(/images/wiwi/icons/link3.gif)  no-repeat left 0.2em;
+	padding-left: 12px;
+}
+
+
+/* -------------------- Adresse statt Submenu --------------------- */
+
+div#submenu ul li.icon  {
+	background: url(/images/wiwi/icons/link1.gif)  no-repeat left 0.2em;
+	padding-left: 15px;
+}
+
+div#submenu ul li.icon a {
+display: inline;
+	background: none;
+	padding-left: 0;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* ------------------------- globale Navigation links  --------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+ul#globalenavigation {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	margin-top: 1.5em !important;
+	padding-left: 0em!important;
+	padding-bottom: 0.4em!important;
+}
+
+ul#globalenavigation li {
+    padding: 0;
+    margin: 0;
+	margin: 0.4em 0 0em 0;
+}
+
+ul#globalenavigation li a  {
+    display: block;
+	padding-left: 17px;
+	color: #00213E;
+}
+
+ul#globalenavigation li a.sprache {
+	background: url(/images/wiwi/icons/link2.gif)  no-repeat left center;
+}
+
+ul#globalenavigation li a.startseite  {
+	background: url(/images/wiwi/icons/homepage.gif)  no-repeat left center;
+}
+
+ul#globalenavigation li a.kontakt  {
+	background: url(/images/wiwi/icons/kontakt.gif)  no-repeat left center;
+}
+
+ul#globalenavigation li a.impressum  {
+	background: url(/images/wiwi/icons/impressum.gif)  no-repeat left center;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* ------------------ globale Navigation oben im Kopfbereich --------------------- */
+/* ------------------------------------------------------------------------------- */
+
+ul#globalenavigation2 {
+margin-top: 0;
+position: absolute;
+top: 2px;
+text-align: right;
+float: right;
+width: 100%;
+z-index: 20;
+}
+
+ul#globalenavigation2 li {
+float: right;
+}
+
+ul#globalenavigation2 li a.sitemap {
+
+padding-left: 16px;
+background: url(/images/wiwi/icons/sitemap.gif)  no-repeat left center;
+margin-right: 10px;
+}
+
+ul#globalenavigation2 li a.english {
+padding-left: 19px;
+background: url(/images/wiwi/icons/english.gif)  no-repeat left center;
+margin-right: 10px;
+}
+
+ul#globalenavigation2 li a.deutsch {
+padding-left: 19px;
+background: url(/images/wiwi/icons/deutsch.gif)  no-repeat left center;
+margin-right: 10px;
+}
+
+
+/* ------------------------------------------------------------------------------- */
+/* --------------------------------- Kopfmotiv ----------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+div#kopfmotiv {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	height: 71px;
+	background:  #8AA7E3;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* ------------------- Mainnavigation - Hauptnavigation oben --------------------- */
+/* ------------------------------------------------------------------------------- */
+
+#mainnavigation {
+	position: relative;
+	width: 100%;
+	height: 1.2em;
+	background-color: #003366;
+}
+
+ul#mainmenu {
+	margin:0;
+	padding:0;
+	}
+
+ul#mainmenu li {
+	float:left;
+	padding: 0;
+	list-style:none;
+	margin:0;
+	border-right:1px solid #FFF;
+	background-color: #003366;
+	background-image: none;
+	}
+	
+
+
+ul#mainmenu li a {
+	color:#FFF;
+	font-weight: bold;
+	padding:0.3em 0.5em 0.3em 0.5em;
+	width:100%;
+	height:100%;
+	display:block;
+	text-decoration:none;
+	text-align:left;
+	white-space: nowrap;
+	font-size: 90%;
+}
+
+ul#mainmenu li a.active {
+	color:#003366;
+	background-color: #FFF;
+}
+
+ul#mainmenu li a:hover,
+ul#mainmenu li a:active,
+ul#mainmenu li a:focus {
+	color:#003366;
+	background-color: #FFF;
+}

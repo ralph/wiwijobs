@@ -1,0 +1,137 @@
+--- 
+categories_009: 
+  updated_at: 2007-03-13 20:42:51
+  title: Hauptstudium WI
+  type: NewsCategory
+  id: "9"
+  position: "7"
+  parent_id: "5"
+  created_at: 2007-03-13 20:42:51
+categories_010: 
+  updated_at: 2007-03-13 20:42:51
+  title: Veranstaltungen / Tagungen
+  type: NewsCategory
+  id: "10"
+  position: "8"
+  parent_id: "5"
+  created_at: 2007-03-13 20:42:51
+categories_011: 
+  updated_at: 2007-03-13 20:42:51
+  title: Accounting
+  type: JobCategory
+  id: "11"
+  position: "9"
+  parent_id: 
+  created_at: 2007-03-13 20:42:51
+categories_012: 
+  updated_at: 2007-03-13 20:42:51
+  title: Consulting
+  type: JobCategory
+  id: "12"
+  position: "10"
+  parent_id: 
+  created_at: 2007-03-13 20:42:51
+categories_001: 
+  updated_at: 2007-03-13 20:42:51
+  title: interne News
+  type: NewsCategory
+  id: "1"
+  position: "1"
+  parent_id: 
+  created_at: 2007-03-13 20:42:51
+categories_013: 
+  updated_at: 2007-03-13 20:42:51
+  title: Finance
+  type: JobCategory
+  id: "13"
+  position: "11"
+  parent_id: 
+  created_at: 2007-03-13 20:42:51
+categories_002: 
+  updated_at: 2007-03-13 20:42:51
+  title: FS News
+  type: NewsCategory
+  id: "2"
+  position: "1"
+  parent_id: "1"
+  created_at: 2007-03-13 20:42:51
+categories_014: 
+  updated_at: 2007-03-13 20:42:51
+  title: Hochschule
+  type: JobCategory
+  id: "14"
+  position: "12"
+  parent_id: 
+  created_at: 2007-03-13 20:42:51
+categories_003: 
+  updated_at: 2007-03-13 20:42:51
+  title: Job News
+  type: NewsCategory
+  id: "3"
+  position: "2"
+  parent_id: "1"
+  created_at: 2007-03-13 20:42:51
+categories_015: 
+  updated_at: 2007-03-13 20:42:51
+  title: IT
+  type: JobCategory
+  id: "15"
+  position: "13"
+  parent_id: 
+  created_at: 2007-03-13 20:42:51
+categories_004: 
+  updated_at: 2007-03-13 20:42:51
+  title: OFIS News
+  type: NewsCategory
+  id: "4"
+  position: "3"
+  parent_id: "1"
+  created_at: 2007-03-13 20:42:51
+categories_016: 
+  updated_at: 2007-03-13 20:42:51
+  title: Marketing & Vertrieb
+  type: JobCategory
+  id: "16"
+  position: "14"
+  parent_id: 
+  created_at: 2007-03-13 20:42:51
+categories_005: 
+  updated_at: 2007-03-13 20:42:51
+  title: externe News
+  type: NewsCategory
+  id: "5"
+  position: "4"
+  parent_id: 
+  created_at: 2007-03-13 20:42:51
+categories_017: 
+  updated_at: 2007-03-13 20:42:51
+  title: sonstiges
+  type: JobCategory
+  id: "17"
+  position: "15"
+  parent_id: 
+  created_at: 2007-03-13 20:42:51
+categories_006: 
+  updated_at: 2007-03-13 20:42:51
+  title: Allgemeines
+  type: NewsCategory
+  id: "6"
+  position: "4"
+  parent_id: "5"
+  created_at: 2007-03-13 20:42:51
+categories_007: 
+  updated_at: 2007-03-13 20:42:51
+  title: Grundstudium
+  type: NewsCategory
+  id: "7"
+  position: "5"
+  parent_id: "5"
+  created_at: 2007-03-13 20:42:51
+categories_008: 
+  updated_at: 2007-03-13 20:42:51
+  title: Hauptstudium BWL / VWL
+  type: NewsCategory
+  id: "8"
+  position: "6"
+  parent_id: "5"
+  created_at: 2007-03-13 20:42:51

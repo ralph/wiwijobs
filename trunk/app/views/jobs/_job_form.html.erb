@@ -1,0 +1,81 @@
+<p>Pflichtfelder sind mit Sternchen (*) markiert.</p>
+<% fields_for :job do |f| %>
+<p>
+	<strong><%= f.label :title, "Titel*", :title => "Pflichtfeld" %></strong><br />
+	<%= f.text_field :title %>
+</p>
+
+<p>
+	<strong><%= f.label :description, "Beschreibung*", :title => "Pflichtfeld" %></strong><br />
+	<%= f.text_area :description %>
+</p>
+<%= render :partial => "auxiliary/textile_help_links", :object => @job %>
+
+<p>
+	<strong><%= f.label :contact_data, "Kontaktdaten" %></strong><br />
+	<%= f.text_area :contact_data, :rows => 5 %>
+</p>
+
+<p>
+	<strong><%= f.label :company, "Unternehmen*", :title => "Pflichtfeld" %></strong><br />
+	<%= f.text_field :company %>
+</p>
+
+<% if current_user.has_right?("jobs", "publish") -%>
+<p>
+	<%= f.check_box :published %> <strong><%= f.label :published, "Veröffentlichen?" %></strong>
+</p>
+<% end -%>
+
+<p>
+	<strong><%= f.label :published_until, "Ablaufdatum" %></strong><br />
+	<%= f.datetime_select :published_until, :start_year => Time.now.year %>
+</p>
+
+<p>
+	<strong><%= f.label :place, "Ort" %></strong><br />
+	<%= f.text_field :place %>
+</p>
+
+<p>
+	<strong><%= f.label :qualification, "Qualifikation" %></strong><br />
+	<%= f.text_field :qualification %>
+</p>
+
+<p>
+	<%= f.check_box :salary %> <strong><%= f.label :salary, "Entlohnung?" %></strong>
+</p>
+
+<p>
+	<strong><%= f.label :start_time, "Beginn" %></strong><br />
+	<%= f.date_select :start_time, :include_blank => true, :start_year => Time.now.year %>
+</p>
+
+<p>
+	<strong><%= f.label :end_time, "Ende" %></strong><br />
+	<%= f.date_select :end_time, :include_blank => true, :start_year => Time.now.year %>
+</p>
+
+<p>
+	<% fields_for :attachment do |attachment| %>
+	<% if @job.attachment %>
+	<strong><%= attachment.label :uploaded_data, "Anhang "+link_to(@job.attachment.filename, @job.attachment.public_filename)+" ersetzen" %></strong><br />
+	<% else %>
+	<strong><%= attachment.label :uploaded_data, "Anhang auswählen:" %></strong><br />
+	<% end %>
+	<%= attachment.file_field :uploaded_data %>
+	<% end %>
+</p>
+
+<p>
+	<strong><%= f.label :category_ids, "Kategorie (Mehrfachauswahl möglich)" %></strong><br />
+	<%- for category in JobCategory.find(:all) -%>
+		<%= check_box_tag "job[category_ids][]", category.id, @job.categories.include?(category) %>
+		<%= category.title %><br />
+	<%- end -%>
+</p>
+
+<p>
+	<%= submit_tag "Abschicken" %> oder <%= link_to 'Abbrechen', jobs_path %>
+</p>
+<% end %>

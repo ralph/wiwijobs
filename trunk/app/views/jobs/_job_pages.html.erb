@@ -1,0 +1,2 @@
+Eintrag <%= @jobs.offset+1 %> bis <%= @jobs.offset + @jobs.size %> von <%= @jobs.total_entries %> Angeboten.
+Gehe zu Seite: <%= will_paginate @jobs, :prev_label => "&laquo;", :next_label => "&raquo;" %>

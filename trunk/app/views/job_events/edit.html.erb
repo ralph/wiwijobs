@@ -1,0 +1,9 @@
+<h2>Veranstaltunshinweis bearbeiten</h2>
+
+<%= user_information_for(@job_event) %>
+
+<%= error_messages_for :job_event %>
+
+<% form_for(:job_event, :url => job_event_path(@job_event), :html => { :method => :put, :multipart => true }) do |f| %>
+	<%= render :partial => "job_event_form" %>
+<% end %>
