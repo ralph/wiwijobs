@@ -1,6 +1,6 @@
 set :application, "wiwijobs"
 set :repository,  "https://wiwijobs.googlecode.com/svn/trunk"
-set :scm_username, "ralph"
+set :scm_username, "sebastian.tuke"
 
 set :deploy_to, "/root/#{application}"
 
