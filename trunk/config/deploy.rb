@@ -10,6 +10,8 @@ role :db,  "128.176.158.70", :primary => true
 
 ssh_options[:username] = 'root'
 
+set :use_sudo, false
+
 desc "Webserver auf der WI-VM neu starten"
 task :restart_web_server, :roles => :web do
   run "/etc/init.d/mongrel_cluster restart"
