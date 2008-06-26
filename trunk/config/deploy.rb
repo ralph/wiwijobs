@@ -7,7 +7,7 @@ set :use_sudo, false
 
 set :scm, "subversion"
 set :scm_username, "sebastian.tuke"
-set :scm_password, "Tv4Wh2VO3AV6"
+set :scm_password, "Tv4Wh2VU3AV6"
 
 
 role :app, "128.176.158.70"
