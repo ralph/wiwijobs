@@ -3,11 +3,11 @@ set :repository,  "https://wiwijobs.googlecode.com/svn/trunk"
 set :deploy_to, "/root/#{application}"
 
 ssh_options[:username] = 'root'
-set :password, "!DfghMnB456*"
 set :use_sudo, false
 
 set :scm, "subversion"
 set :scm_username, "sebastian.tuke"
+set :scm_password, "Tv4Wh2VO3AV6"
 
 
 role :app, "128.176.158.70"
