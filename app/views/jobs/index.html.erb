@@ -1,5 +1,16 @@
-<h2>Jobangebote <%= link_to image_tag("icons/add.gif", :title => "Neues Praktikumsangebot anlegen", :class => "sanscons"), new_job_path %></h2>
-<p>Filter: <%= select :filter, :to_s, [["alle", "all"], ["abgelaufene", "expired"], ["aktuelle","current"], ["unveröffentlichte","unpublished"], ["eigene","own"]], {}, { :id => "jobs_filter" } %></p>
+<h2>Job-Angebote</h2>
+
+<table width="100%">
+<tr>
+  <td><div id="createnew"><p>
+<%= link_to image_tag("icons/add.gif", :title => "Neues Job-Angebot anlegen", :class => "sanscons"), new_job_path %>
+<%= link_to "Neues Job-Angebot anlegen", new_job_path %>
+</p></div></td>
+  <td align="right"><p>Filter: <%= select :filter, :to_s, [["alle", "all"], ["abgelaufene", "expired"], ["aktuelle","current"], ["unveröffentlichte","unpublished"], ["eigene","own"]], {}, { :id => "jobs_filter" } %></p></td>
+</tr>
+</table>
+
+
 <%= observe_field :jobs_filter, :url => jobs_path, :with => "filter", :method => :get %>
 
 <%= render :partial => "jobs_table", :object => @jobs %>

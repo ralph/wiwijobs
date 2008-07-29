@@ -18,10 +18,9 @@
 		<div id="header">
 			<div id="topmenu">
 				<ul>
-					<li>Eingeloggt als <%= link_to current_user.name, user_path(current_user) %></li>
+					<li><%= link_to current_user.name, user_path(current_user) %></li>
 					<li><%= link_to 'Ausloggen', "/logout", :confirm => 'Sind Sie sicher?' %></li>
 					<li><%= link_to 'Zur Jobbörse', index_url %></li>
-					<li><%= link_to 'Zur Fachschaft WiWi', "http://www.wi.uni-muenster.de/fs/" %></li>
 				</ul>
 			</div>
 			<%= image_tag '/stylesheets/ofis2/wiwi_schloss.gif', :id => "wiwi_schloss" %>
