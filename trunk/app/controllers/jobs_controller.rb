@@ -35,10 +35,10 @@ class JobsController < ApplicationController
   def list
     params[:page] ||= 1
     if params[:category_id].blank?
-      @jobs = Job.find_current_and_published.paginate(:page => params[:page], :per_page => 10)
+      @jobs = Job.find_current_and_published.paginate(:page => params[:page], :per_page => 20)
     else
       @category = JobCategory.find(params[:category_id], :include => :jobs)
-      @jobs = @category.jobs.find_current_and_published.paginate(:page => params[:page], :per_page => 10)
+      @jobs = @category.jobs.find_current_and_published.paginate(:page => params[:page], :per_page => 20)
     end
 
     respond_to do |format|

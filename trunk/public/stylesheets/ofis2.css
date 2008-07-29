@@ -44,13 +44,13 @@ em {
 
 a:link {
 	color: #333;
-	background-color: #fff;
+	background-color: #d7d4d3;
 	text-decoration: none;
 }
 
 a:visited {
 	color: #333;
-	background-color: #fff;
+	background-color: #d7d4d3;
 	text-decoration: none;
 }
 
@@ -146,7 +146,7 @@ h4 {
 
 #topmenu {
 	height: 70px;
-	width: 250px;
+	width: 190px;
 	float: left;
 	padding-top: 13px;
 	padding-right: 30px;
@@ -189,6 +189,13 @@ h4 {
 	font-size: 0.786em;
 	line-height: 5em;
 	color: #fff;
+}
+
+#createnew a {
+	text-align: right;
+        font-size: 14px;
+        background-color: #ffffff;
+        font-weight: bold;
 }
 
 /* @end */

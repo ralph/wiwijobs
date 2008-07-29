@@ -9,7 +9,7 @@ class Job < ActiveRecord::Base
   validates_presence_of :title, :description, :company
   attr_protected :published_at
   acts_as_textiled :description, :contact_data
-  localized_names "Das Praktikumsangebot",
+  localized_names "Das Job-Angebot",
     :title => "Der Titel",
     :description => "Die Beschreibung",
     :place => "Der Ort",

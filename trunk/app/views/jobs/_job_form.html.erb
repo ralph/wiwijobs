@@ -1,24 +1,24 @@
 <p>Pflichtfelder sind mit Sternchen (*) markiert.</p>
 <% fields_for :job do |f| %>
 <p>
-	<strong><%= f.label :title, "Titel*", :title => "Pflichtfeld" %></strong><br />
+	<strong><%= f.label :title, "Position*", :title => "Pflichtfeld" %></strong><br />
 	<%= f.text_field :title %>
-</p>
-
-<p>
-	<strong><%= f.label :description, "Beschreibung*", :title => "Pflichtfeld" %></strong><br />
-	<%= f.text_area :description %>
-</p>
-<%= render :partial => "auxiliary/textile_help_links", :object => @job %>
-
-<p>
-	<strong><%= f.label :contact_data, "Kontaktdaten" %></strong><br />
-	<%= f.text_area :contact_data, :rows => 5 %>
 </p>
 
 <p>
 	<strong><%= f.label :company, "Unternehmen*", :title => "Pflichtfeld" %></strong><br />
 	<%= f.text_field :company %>
+</p>
+
+<p>
+	<strong><%= f.label :description, "Kurzbeschreibung der Stelle*", :title => "Pflichtfeld" %></strong><br />
+	<%= f.text_area :description %>
+</p>
+<!--<%= render :partial => "auxiliary/textile_help_links", :object => @job %>-->
+
+<p>
+	<strong><%= f.label :contact_data, "Kontaktdaten für Bewerber" %></strong><br />
+         <%= f.text_area :contact_data, :rows => 5 %>
 </p>
 
 <% if current_user.has_right?("jobs", "publish") -%>
@@ -38,7 +38,7 @@
 </p>
 
 <p>
-	<strong><%= f.label :qualification, "Qualifikation" %></strong><br />
+	<strong><%= f.label :qualification, "Qualifikationen" %></strong><br />
 	<%= f.text_field :qualification %>
 </p>
 
