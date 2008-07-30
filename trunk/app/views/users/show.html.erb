@@ -1,4 +1,13 @@
-<h2>Profilseite von <%= @user.name %> <%= link_to image_tag("icons/edit.gif", :alt => "Bearbeiten", :class => "sanscons"), edit_user_path(@user) if current_user.may?("update", @user) %></h2>
+<h2>Profilseite von <%= @user.name %> </h2>
+
+<div id="createnew"><p>
+<%= link_to image_tag("icons/edit.gif", :title => "Daten bearbeiten", :class => "sanscons"), edit_user_path(@user) if current_user.may?("update", @user) %>
+<%= link_to "Daten bearbeiten", edit_user_path(@user) if current_user.may?("update", @user) %>
+</p></div>
+
+<!--<%= link_to image_tag("icons/edit.gif", :alt => "Bearbeiten", :class => "sanscons"), edit_user_path(@user) if current_user.may?("update", @user) %></h2>-->
+
+<!--
 
 <% if @user.avatar: -%>
 	<%= link_to image_tag(@user.avatar.public_filename(:thumb)), @user.avatar.public_filename %>
@@ -6,12 +15,15 @@
 	<%= image_tag("no_avatar.png") %>
 <% end -%>
 
-<h3>Kontakt</h3>
+-->
+
+<h3>Kontaktdaten</h3>
 <p>
-	E-Mail: <%= mail_to @user.email, nil, :encode => 'hex', :replace_at => "[at]", :replace_dot => "[dot]" %>
+        <%- unless @user.contact_person_name.blank? -%>Ansprechpartner: <%=h @user.contact_person_name %><br /><%- end -%>
+        E-Mail: <%= @user.email %>
 	<%- unless @user.mobile.blank? -%><br />Handy: <%=h @user.mobile %><%- end -%>
 	<%- unless @user.icq.blank? -%><br />ICQ: <%=h @user.icq %><%- end -%>
-	<%- unless @user.homepage.blank? -%><br />Homepage: <%= link_to @user.homepage, @user.homepage %><%- end -%>
+	<%- unless @user.homepage.blank? -%><br />Homepage: <%= @user.homepage %><%- end -%>
 </p>
 
 <%- unless @user.street.blank? and @user.city.blank? and @user.phone.blank? -%>
@@ -19,7 +31,7 @@
 <p>
 	<%- unless @user.street.blank? -%><%=h @user.street %><%- end -%>
 	<%- unless @user.city.blank? -%><br /><%=h @user.zip.to_s+" "+@user.city %><%- end -%>
-	<%- unless @user.phone.blank? -%><br /><%=h "Tel: "+@user.phone %><%- end -%>
+	<%- unless @user.phone.blank? -%><br /><%=h "Telefon: "+@user.phone %><%- end -%>
 </p>
 <%- end -%>
 
@@ -32,6 +44,8 @@
 </p>
 <%- end -%>
 
+<!--
+
 <%- if @user[:type] == "Student" -%>
 <h3>Daten</h3>
 <p>
@@ -39,10 +53,13 @@
 	<%- unless @user.birthday.blank? -%><br />Geburtstag: <%=h @user.birthday %><%- end -%>
 </p>
 
-<h3>Sonstiges</h3>
+<h3>Sonstige Daten</h3>
 <p>
 	Studiengang: <%=h @user.study_course %><br />
 	Fachschaftler: <%- if @user.opt_out_date.blank? -%>Ja. <%- else -%>Nein.<%- end -%><br />
 	WI-AGler: <%- if !@user.wi_ag_member.blank? -%>Ja. <%- else -%>Nein.<%- end -%>
 </p>
+
 <%- end -%>
+
+-->

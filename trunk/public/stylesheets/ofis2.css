@@ -198,6 +198,11 @@ h4 {
         font-weight: bold;
 }
 
+#whitebg a  {
+        background-color: #ffffff;
+        font-size:0.857em;
+}
+
 /* @end */
 
 /* @group Top Menu */

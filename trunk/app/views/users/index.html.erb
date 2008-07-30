@@ -1,6 +1,20 @@
-<h2>Benutzerverwaltung <%= link_to image_tag("icons/add.gif", :alt => "Neuen Benutzer anlegen", :class => "sanscons"), new_user_path %></h2>
+<h2>Benutzerverwaltung </h2>
 
-<p>Filter: <%= select :filter, :to_s, [["alle", "all"], ["Studenten", "Student"], ["Fakultäten","Faculty"], ["Unternehmen","Company"]], {}, { :id => "users_filter" } %></p>
+<table width="100%">
+<tr>
+  <td><div id="createnew"><p>
+<%= link_to image_tag("icons/add.gif", :title => "Neues Benutzer anlegen", :class => "sanscons"), new_user_path %>
+<%= link_to "Neuen Benutzer anlegen", new_user_path %>
+</p></div></td>
+  <td align="right"><p>Filter: <%= select :filter, :to_s, [["alle", "all"], ["Studenten", "Student"], ["Fakultäten","Faculty"], ["Unternehmen","Company"]], {}, { :id => "users_filter" } %></p></td>
+</tr>
+</table>
+
+
+<!--<%= link_to image_tag("icons/add.gif", :alt => "Neuen Benutzer anlegen", :class => "sanscons"), new_user_path %>
+
+<p>Filter: <%= select :filter, :to_s, [["alle", "all"], ["Studenten", "Student"], ["Fakultäten","Faculty"], ["Unternehmen","Company"]], {}, { :id => "users_filter" } %></p>-->
+
 <%= observe_field :users_filter, :url => users_path, :with => "filter", :method => :get %>
 
 <%= render :partial => "users_table", :object => @users %>

@@ -7,7 +7,7 @@
 	<%= @job.description %>
 	<%- unless @job.contact_data.blank? -%><strong>Kontaktdaten:<br /></strong><%= @job.contact_data %><%- end -%>
 	<%- unless @job.place.blank? -%><strong>Ort:</strong> <%= @job.place %><%- end -%>
-	<%- unless @job.qualification.blank? -%><br /><strong>Erforderliche Qualifikation: </strong><%= @job.qualification %><%- end -%>
+	<%- unless @job.qualification.blank? -%><br /><strong>Erforderliche Qualifikationen: </strong><%= @job.qualification %><%- end -%>
 	<%- unless @job.salary.blank? -%><p>Es wird eine Entlohnung angeboten.</p><%- end -%>
 	<%- unless @job.start_time.blank? -%><br /><strong>Beginn:</strong> <%= @job.start_time %><%- end -%>
 	<%- unless @job.end_time.blank? -%><br /><strong>Ende:</strong> <%= @job.end_time %><%- end -%>

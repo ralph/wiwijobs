@@ -81,7 +81,7 @@ class JobsController < ApplicationController
 
     respond_to do |format|
       if @job.save
-        flash[:notice] = 'Das Praktikumsangebot wurde angelegt.'
+        flash[:notice] = 'Das Job-Angebot wurde angelegt.'
         format.html { redirect_to jobs_url }
         format.xml  { head :created, :location => jobs_url }
       else
@@ -102,7 +102,7 @@ class JobsController < ApplicationController
     respond_to do |format|
       if @job.update_attributes(params[:job])
         Attachment.delete_all_orphaned
-        flash[:notice] = 'Das Praktikumsangebot wurde aktualisiert.'
+        flash[:notice] = 'Das Job-Angebot wurde aktualisiert.'
         format.html { redirect_to jobs_url }
         format.xml  { head :ok }
       else

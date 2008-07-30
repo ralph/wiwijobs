@@ -15,7 +15,7 @@
 			<td><%= image_tag "icons/#{status_icon[job.status][1]}", :class => "#{status_icon[job.status][0]} icon", :title => "Das Praktikumsangebot #{job.title} ist #{job.status}", :alt => "#{job.status}" %></td>
 			<td>
 			<%- if current_user.may?("update", job) -%>
-			<%= link_to job.title, edit_job_path(job), :title => "Praktikumsangebot #{job.title} bearbeiten" %>
+			<%= link_to job.title, edit_job_path(job), :title => "Job-Angebot #{job.title} bearbeiten" %>
 			<%- else -%>
 			<%=h job.title %>
 			<%- end -%>
