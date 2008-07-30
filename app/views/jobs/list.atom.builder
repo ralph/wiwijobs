@@ -1,5 +1,5 @@
 atom_feed(:url => formatted_list_jobs_url(:atom)) do |feed|
-  feed.title("Die aktuellsten Praktikumsangebote")
+  feed.title("Die aktuellsten Job-Angebote")
   feed.updated(@jobs.first ? @jobs.first.created_at : Time.now.utc)
   feed.link(:rel => "alternate", :type => "text/html", :href => list_jobs_url)
   

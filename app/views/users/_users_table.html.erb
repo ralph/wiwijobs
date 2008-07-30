@@ -1,8 +1,8 @@
 <table id="users" class="content_table">
 	<thead>
 		<tr>
+			<th>Name</th>
 			<th>Login</th>
-			<th>E-Mail</th>
 			<th>&nbsp;</th>
 			<th>&nbsp;</th>
 		</tr>
@@ -11,8 +11,8 @@
 	<tbody>
 		<%- @users.each do |user| -%>
 		<tr class="<%= cycle('odd', 'even') %>">
-			<td><%= link_to user.login, user_path(user) %></td>
-			<td><%= mail_to user.email, user.email %></td>
+			<td><%= link_to user.name, user_path(user) %></td>
+                        <td><%= link_to user.login, user_path(user) %></td>
 			<td><%= link_to image_tag("icons/edit.gif", :title => "Bearbeiten", :class => "sanscons"), edit_user_path(user) if current_user.may?("update", user) %></td>
 			<td><%= link_to image_tag("icons/trash.gif", :title => "Löschen", :class => "sanscons"), user_path(user), :confirm => 'Sind Sie sicher?', :method => :delete  if current_user.may?("destroy", user) %></td>
 		</tr>
