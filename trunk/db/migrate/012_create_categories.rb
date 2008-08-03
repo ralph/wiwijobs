@@ -21,7 +21,7 @@ class CreateCategories < ActiveRecord::Migration
     external_news.children << NewsCategory.create(:title => "Hauptstudium WI")
     external_news.children << NewsCategory.create(:title => "Veranstaltungen / Tagungen")
 
-    %w(Accounting Consulting Finance Hochschule IT Marketing\ &\ Vertrieb sonstiges).each do |job_category_title|
+    %w(Accounting Consulting Finance Hochschule IT Marketing\ &\ Vertrieb Kommunikation sonstige).each do |job_category_title|
       JobCategory.create(:title => job_category_title)
     end
     

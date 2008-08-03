@@ -55,11 +55,10 @@
 						<h2 class="invisible">Hauptnavigation</h2>
 						<ul id="mainmenu">
 							<li><%= link_to "Startseite", index_url %></li>
-							<li><%= link_to "Praktika", list_jobs_path %></li>
-                                                        <li><%= link_to "Abschlussarbeiten", list_jobs_path %></li>
-                                                        <li><%= link_to "Berufseinstieg", list_jobs_path %></li>
-							<!--<li><%= link_to "Veranstaltungshinweise", list_job_events_path %></li>
-							<li><%= link_to "Praktikums-Links", list_job_links_path %></li>-->
+							<li><%= link_to "Praktika", list_intern_jobs_path %></li>
+                                                        <li><%= link_to "Werkstudenten", list_student_jobs_path %></li>
+                                                        <li><%= link_to "Abschlussarbeiten", list_degree_jobs_path %></li>
+                                                        <li><%= link_to "Berufseinstieg", list_graduate_jobs_path %></li>
 							<li><%= link_to "Kontakt für Unternehmen", contact_path %></li>
                                                 </ul>
 					</div>

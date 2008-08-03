@@ -5,7 +5,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :job_links, :collection => { :list => :get }
   map.resources :news_items, :collection => { :internal => :get, :job => :get, :list => :get }
   map.resources :users, :new => { :update_user_type_specific_fields => :post }, :collection => { :students => :get }
-  map.resources :jobs, :member => { :publish => :put, :unpublish => :put }, :collection => { :list => :get }
+  map.resources :jobs, :member => { :publish => :put, :unpublish => :put }, :collection => { :list => :get, :list_degree => :get, :list_intern => :get , :list_graduate => :get, :list_student => :get,  :home => :get }
   map.resources :job_events, :collection => { :list => :get }
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -20,7 +20,7 @@ ActionController::Routing::Routes.draw do |map|
 
   # You can have the root of your site routed by hooking up ''
   # -- just remember to delete public/index.html.
-  map.index '', :controller => "jobs", :action => "list"
+  map.index '', :controller => "jobs", :action => "home"
   map.legal '/impressum', :controller => "jobs", :action => "impressum"
   map.contact '/contact', :controller => "jobs", :action => "contact"
   map.textilize '/textilize', :controller => "auxiliary", :action => "textilize"

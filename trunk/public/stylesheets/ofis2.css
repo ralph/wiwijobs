@@ -165,7 +165,7 @@ h4 {
 	margin-left: 9px;
 	display: inline;
 	padding-top: 15px;
-        background-color: #666666;
+        background-color: #000;
 }
 
 #content {
@@ -249,7 +249,7 @@ h4 {
 	cursor: pointer;
 	text-decoration: none;
 	color: #fff;
-	background-color: #666666;
+	background-color: #000;
 }
 
 #menu ul li a:hover {
