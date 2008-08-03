@@ -75,7 +75,7 @@ class Job < ActiveRecord::Base
     self.published_until = 2.months.from_now
     self.description = "Weiteres siehe Anhang."
     self.published_at = Time.now
-    self.categories << JobCategory.find_by_title("sonstiges")
+    self.categories << JobCategory.find_by_title("sonstige")
   end
     
   # Class methods:
