@@ -3,7 +3,7 @@
 		<tr>
 			<th>&nbsp;</th>
 			<th><%= jobs_header_column("Titel", "title") %></th>
-			<th><%= jobs_header_column("Eingestellt von", "author_id") %></th>
+			<th><%= jobs_header_column("Unternehmen", "company_id") %></th>
 			<th><%= jobs_header_column("Ablaufdatum", "published_until") %></th>
 			<th>&nbsp;</th>
 			<th>&nbsp;</th>
@@ -12,22 +12,22 @@
 	<tbody>
 		<%- @jobs.each do |job| -%>
 		<tr class="<%= cycle('odd', 'even') %>">
-			<td><%= image_tag "icons/#{status_icon[job.status][1]}", :class => "#{status_icon[job.status][0]} icon", :title => "Das Praktikumsangebot #{job.title} ist #{job.status}", :alt => "#{job.status}" %></td>
+			<td><%= image_tag "icons/#{status_icon[job.status][1]}", :class => "#{status_icon[job.status][0]} icon", :title => "Das Stellenangebot #{job.title} ist #{job.status}", :alt => "#{job.status}" %></td>
 			<td>
 			<%- if current_user.may?("update", job) -%>
-			<%= link_to job.title, edit_job_path(job), :title => "Job-Angebot #{job.title} bearbeiten" %>
+			<%= link_to job.title, edit_job_path(job), :title => "Stellenangebot bearbeiten" %>
 			<%- else -%>
 			<%=h job.title %>
 			<%- end -%>
 			</td>
-			<td><%= link_to job.author.name, user_path(job.author) %></td>
-			<td><%=h job.published_until.to_s(:short) %></td>
+                        <td><%= job.company %></td>
+			<td><%=h job.published_until.to_s(:notime) %></td>
 			<td>
-				<%= link_to(image_tag("icons/play.gif", :title => "Praktikumsangebot #{job.title} veröffentlichen", :class => "sanscons"), {:action => "update", :id => job, :job => {:published => "1"}}, :method => "put") if job.is_pending? and current_user.may?('publish', job) %>
-				<%= link_to(image_tag("icons/stop.gif", :title => "Die Veröffentlichung des Praktikumsangebots #{job.title} rückgängig machen", :class => "sanscons"), {:action => "update", :id => job, :job => {:published => "0"}}, :method => "put")  if job.is_published? and current_user.may?('unpublish', job) %>
+				<%= link_to(image_tag("icons/play.gif", :title => "Stellenangebot veröffentlichen", :class => "sanscons"), {:action => "update", :id => job, :job => {:published => "1"}}, :method => "put") if job.is_pending? and current_user.may?('publish', job) %>
+				<%= link_to(image_tag("icons/stop.gif", :title => "Die Veröffentlichung des Stellenangebots rückgängig machen", :class => "sanscons"), {:action => "update", :id => job, :job => {:published => "0"}}, :method => "put")  if job.is_published? and current_user.may?('unpublish', job) %>
 			</td>
 			<td>
-				<%= link_to image_tag("icons/trash.gif", :title => "Praktikumsangebot #{job.title} löschen", :class => "sanscons"), job_path(job), :confirm => 'Sind Sie sicher?', :method => :delete if current_user.may?('destroy', job) -%>
+				<%= link_to image_tag("icons/trash.gif", :title => "Stellenangebot löschen", :class => "sanscons"), job_path(job), :confirm => 'Sind Sie sicher?', :method => :delete if current_user.may?('destroy', job) -%>
 			</td>
 		</tr>
 		<%- end -%>

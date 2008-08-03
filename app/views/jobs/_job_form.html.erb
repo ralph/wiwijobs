@@ -1,5 +1,11 @@
 <p>Pflichtfelder sind mit Sternchen (*) markiert.</p>
 <% fields_for :job do |f| %>
+
+<p>
+	<strong><%= f.label :job_type_id, "Job-Typ*", :title => "Pflichtfeld" %></strong><br />
+	<%= f.select :job_type_id, JobType.find(:all).collect {|j| [ j.title, j.id ] } %>
+</p>
+
 <p>
 	<strong><%= f.label :title, "Position*", :title => "Pflichtfeld" %></strong><br />
 	<%= f.text_field :title %>
@@ -28,8 +34,8 @@
 <% end -%>
 
 <p>
-	<strong><%= f.label :published_until, "Ablaufdatum" %></strong><br />
-	<%= f.datetime_select :published_until, :start_year => Time.now.year %>
+	<strong><%= f.label :published_until, "Ablaufdatum des Angebots" %></strong><br />
+	<%= f.date_select :published_until, :start_year => Time.now.year %>
 </p>
 
 <p>
@@ -48,13 +54,13 @@
 
 <p>
 	<strong><%= f.label :start_time, "Beginn" %></strong><br />
-	<%= f.date_select :start_time, :include_blank => true, :start_year => Time.now.year %>
+	<%= f.date_select :start_time, :discard_day => true, :include_blank => true, :start_year => Time.now.year %>
 </p>
 
-<p>
+<!--<p>
 	<strong><%= f.label :end_time, "Ende" %></strong><br />
 	<%= f.date_select :end_time, :include_blank => true, :start_year => Time.now.year %>
-</p>
+</p>-->
 
 <p>
 	<% fields_for :attachment do |attachment| %>

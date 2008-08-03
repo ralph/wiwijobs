@@ -34,7 +34,7 @@ module ApplicationHelper
     elsif ("Faculty" == user[:type]) or ("Company" == user[:type]):
       [ {:label => "Startseite", :submenu_items => [link_to("Startseite", admin_path)]},
         {:label => "Eigenes Profil", :submenu_items => [link_to("Eigenes Profil", user_path(user))]},
-        {:label => "Job-Angebote", :submenu_items => [link_to("Job-Angebote", jobs_path)]}
+        {:label => "Job-Angebote", :submenu_items => [link_to("Job-Angebote", jobs_path(:filter => "own"))]}
       ]
     else
       [ {:label => "Start", :submenu_items => [link_to("Startseite", index_path)]} ]

@@ -1,7 +1,7 @@
 class JobsController < ApplicationController
   include AttachableSystem
   layout "backend"
-  skip_before_filter :login_required, :check_authorization, :only => [ :list, :show, :impressum, :contact ]
+  skip_before_filter :login_required, :check_authorization, :only => [ :list, :list_degree, :list_student, :list_graduate, :list_intern, :show, :home, :impressum, :contact ]
   before_filter :clean_params, :only => [:create, :update]
 
   # GET /jobs
@@ -29,10 +29,51 @@ class JobsController < ApplicationController
       format.xml  { render :xml => @jobs.to_xml }
     end
   end
+  
+  def list_degree
+    redirect_to :action => 'list', :job_type_id => 1
+  end
+  
+  def list_graduate
+    redirect_to :action => 'list', :job_type_id => 3
+  end
 
+  def list_intern
+    redirect_to :action => 'list', :job_type_id => 2
+  end
+
+ def list_student
+    redirect_to :action => 'list', :job_type_id => 4
+  end
+  
   # GET /jobs;list
   # GET /jobs.xml;list
   def list
+    params[:page] ||= 1
+    if params[:job_type_id] 
+      @job_type_id=params[:job_type_id]
+    else 
+      @job_type_id=2
+    end
+     
+    if params[:category_id].blank?
+      @jobs = JobType.find_by_id(@job_type_id).jobs.find_current_and_published.paginate(:page => params[:page], :per_page => 20)
+    else
+      @category = JobCategory.find(params[:category_id], :include => :jobs)
+      @jobs = @category.jobs.find_current_and_published.paginate(:page => params[:page], :per_page => 20)
+    end
+
+    respond_to do |format|
+      format.html { render :layout => "frontend" }
+      format.js
+      format.xml  { render :xml => @jobs.to_xml }
+      format.atom { render :layout => false }
+    end
+  end
+
+  # GET /jobs;home
+  # GET /jobs.xml;home
+  def home
     params[:page] ||= 1
     if params[:category_id].blank?
       @jobs = Job.find_current_and_published.paginate(:page => params[:page], :per_page => 20)
@@ -48,7 +89,7 @@ class JobsController < ApplicationController
       format.atom { render :layout => false }
     end
   end
-
+  
   # GET /jobs/1
   # GET /jobs/1.xml
   def show

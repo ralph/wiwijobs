@@ -1,6 +1,7 @@
 class Job < ActiveRecord::Base
   include LoggerSystem
   acts_as_loggable
+  belongs_to :job_type, :class_name => "Job_Type", :foreign_key => "job_type_id"
   belongs_to :author, :class_name => "User", :foreign_key => "author_id"
   belongs_to :last_editor, :class_name => "User", :foreign_key => "last_editor_id"
   has_one :attachment, :as => :attachable, :dependent => :destroy
@@ -108,4 +109,5 @@ class Job < ActiveRecord::Base
       find_ordered(:conditions => "published_until >= NOW() AND published_at <= NOW()")
     end
   end
+  
 end

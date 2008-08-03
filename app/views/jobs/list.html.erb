@@ -1,5 +1,5 @@
 <% content_for :headline do %>
-	Herzlich Willkommen
+	JOB_ID_TITLE   <% params[:job_type_id] %>
 <% end %>
 
 <% content_for :footer_left do %>
@@ -7,18 +7,9 @@
 <% end %>
 
 <div id="text-left" class="einspaltig">
-	<div class="ImageLeft">
-		<%= image_tag "wiwi/fakultaet/praktika.jpg" %>
-	</div>
-	<p>
-          Herzlich Willkommen bei <i>WiWi Jobs</i>, der Jobbörse für Münsteraner WiWi-Studenten.
-        </p>
-        <p>
-          Hier finden Studierende und Absolventen der Wirtschaftswissenschaftlichen Fakultät
-          aktuelle Angebote für Praktika, Abschlussarbeiten sowie den Berufseinstieg.
-	</p>
+
 	<div class="clearall" style="clear:both;"></div>																																								 
-	<h2>Die letzten Job-Angebote aus dem Bereich: <%= collection_select :category, :id, JobCategory.find(:all), :id, :title_with_number_of_jobs, {:prompt => "alle"}, { :id => "jobs_filter" } %></h2>
+	<h2>Die aktuellen Angebote für JOB_ID_TITLE aus dem Bereich: <%= collection_select :category, :id, JobCategory.find(:all), :id, :title_with_number_of_jobs, {:prompt => "alle"}, { :id => "jobs_filter" } %></h2>
 	<%= observe_field :jobs_filter, :url => list_jobs_path, :with => "category_id", :method => :get %>
 	
 	<div id="job_list">
