@@ -3,8 +3,10 @@
 <table width="100%">
 <tr>
   <td><div id="createnew"><p>
-<%= link_to image_tag("icons/add.gif", :title => "Neues Benutzer anlegen", :class => "sanscons"), new_user_path %>
-<%= link_to "Neuen Benutzer anlegen", new_user_path %>
+<%= link_to image_tag("icons/add.gif", :title => "Neuen Unternehmensbenutzer anlegen", :class => "sanscons"), new_user_path(:user_type => "Company") %>
+<%= link_to "Neuen Unternehmensbenutzer anlegen", new_user_path(:user_type => "Company") %></p><p>
+<%= link_to image_tag("icons/add.gif", :title => "Neuen Fakultätsbenutzer anlegen", :class => "sanscons"), new_user_path(:user_type => "Faculty") %>
+<%= link_to "Neuen Fakultätsbenutzer anlegen", new_user_path(:user_type => "Faculty") %>
 </p></div></td>
   <td align="right"><p>Filter: <%= select :filter, :to_s, [["alle", "all"], ["Studenten", "Student"], ["Fakultät","Faculty"], ["Unternehmen","Company"]], {}, { :id => "users_filter" } %></p></td>
 </tr>

@@ -80,7 +80,11 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
-    @user_type = "Student"
+    if params[:user_type] 
+      @user_type=params[:user_type]
+    else 
+      @user_type="Student"
+    end
     @roles, @default_role = Role.available_roles_for(@user_type)
     @user = User.new
     @user.role = @default_role
