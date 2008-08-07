@@ -122,7 +122,7 @@ class JobsController < ApplicationController
 
     respond_to do |format|
       if @job.save
-        flash[:notice] = 'Das Job-Angebot wurde angelegt.'
+        flash[:notice] = 'Das Job-Angebot wurde angelegt. Bitte beachten Sie, dass externe Angebote durch das Career Development Center vor der Veröffentlichung freigegeben werden müssen.'
         format.html { redirect_to jobs_url }
         format.xml  { head :created, :location => jobs_url }
       else

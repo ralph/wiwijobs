@@ -20,3 +20,11 @@
 <%= observe_field :users_filter, :url => users_path, :with => "filter", :method => :get %>
 
 <%= render :partial => "users_table", :object => @users %>
+
+<table width="100%">
+<tr>
+<td><div id="createspecialuser"><p>
+<%= link_to "Neuen Spezialbenutzer anlegen", new_user_path(:user_type => "Student"), :confirm => 'Sind Sie sicher, dass Sie einen Spezialbenutzer anlegen möchten? Dieser Benutzertyp ist nur für Administratoren der Jobbörse bestimmt. '%></p><p>
+</p></div></td>
+</tr>
+</table>
