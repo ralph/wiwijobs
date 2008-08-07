@@ -198,6 +198,13 @@ h4 {
         font-weight: bold;
 }
 
+#createspecialuser a {
+	text-align: right;
+        font-size: 8px;
+        background-color: #ffffff;
+}
+
+
 #whitebg a  {
         background-color: #ffffff;
         font-size:0.857em;
