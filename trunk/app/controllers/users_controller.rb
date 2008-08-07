@@ -112,7 +112,7 @@ class UsersController < ApplicationController
     else
       @user = Student.new(params[:user])
     end
-    (@avatar = @user.build_avatar(params[:avatar])) if !params[:avatar][:uploaded_data].blank?
+#    (@avatar = @user.build_avatar(params[:avatar])) if !params[:avatar][:uploaded_data].blank?
     @user.activate if (params[:activate][:checked] == "1")
     respond_to do |format|
       if @user.save
@@ -126,7 +126,7 @@ class UsersController < ApplicationController
         format.html { redirect_to user_url(@user) }
         format.xml  { head :created, :location => user_url(@user) }
       else
-        @user.avatar ? (@user.avatar = nil unless @user.avatar.valid?) :
+#        @user.avatar ? (@user.avatar = nil unless @user.avatar.valid?) :
         format.html { render :action => "new" }
         format.xml  { render :xml => @user.errors.to_xml }
       end

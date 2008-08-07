@@ -2,11 +2,11 @@
 	<% fields_for :avatar do |avatar| %>
 	<label for="avatar">
 		<% if @user.avatar %>
-		Benutzerbild <%= link_to @user.avatar.filename, @user.avatar.public_filename %> ersetzen:
+		 <%= link_to @user.avatar.filename, @user.avatar.public_filename %> ersetzen:
 		<% else %>
-		Benutzerbild auswählen:
+		 Benutzerbild auswählen: 
 		<% end %>
 	</label>
-	<%= avatar.file_field :uploaded_data %>
+	<%= avatar.file_field :uploaded_data, :disabled => true %>
 	<% end %>
 </p>

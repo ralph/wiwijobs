@@ -1,9 +1,11 @@
+<H2>Neuen Benutzer anlegen</H2>
+
 <%= error_messages_for :user %>
 <% form_for(:user, :url => users_path, :html => { :multipart => true }) do |f| -%>
 
 <dl id="user_type_selection">
 	<dt><%= label :type, :type, "Typ" %></dt>
-	<dd><%= select :type, :type, [["Student", "Student"], ["Fakultät", "Faculty"], ["Unternehmen", "Company"]], {:selected => (@user[:type] or @user_type)}, { :id => "user_type_selector" } %></dd>
+	<dd><%= select :type, :type, [["Spezialbenutzer", "Student"], ["Fakultät", "Faculty"], ["Unternehmen", "Company"]], {:selected => (@user[:type] or @user_type)}, { :id => "user_type_selector" } %></dd>
 </dl>
 
 <%= observe_field :user_type_selector, :url => update_user_type_specific_fields_new_user_path, :with => "type" %>
@@ -13,21 +15,32 @@
 
 <%= render :partial => "user_roles" %>
 
+<p> </p>
+
+<% if @user_type == "Company" || @user_type == "Faculty" %>
+    <%= render :partial => "faculty_and_company_fields" %>
+<% end %>
+
+<% if @user_type == "Student" %>
+    <%= render :partial => "student_fields" %>
+<% end %>
+
+<p> </p>
 
 <dl id="essential_fields">
 	<dt><%= f.label :login, "Benutzername" %></dt>
 	<dd><%= f.text_field :login %></dd>
 	<dt><%= f.label :password, "Passwort" %></dt>
 	<dd><%= f.password_field :password %></dd>
-	<dt><%= f.label :password_confirmation, "Passwort Bestätigung" %></dt>
+	<dt><%= f.label :password_confirmation, "Passwort (Wiederholung)" %></dt>
 	<dd><%= f.password_field :password_confirmation %></dd>
 	<%= render :partial => "general_fields" %>
 </dl>
 
-<%= render :partial => "student_fields" %>
-<%= render :partial => "faculty_and_company_fields" %>
-<%= render :partial => "avatar_fields" %>
-<%= render :partial => "activation_fields" %>
+
+    <%- # = render :partial => "avatar_fields" -%>
+    
+    <%= render :partial => "activation_fields" %>
 
 <p><%= submit_tag 'Abschicken' %> </p>
 <% end -%>
