@@ -1,0 +1,789 @@
+/*--- allgemeine Angaben ---*/
+body {
+	width: 100%;
+	font-family: Verdana, Arial, Geneva, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #333;
+}
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+	list-style-type:none;
+	color: #333;
+	text-decoration:none;
+}
+
+h1 {
+	text-transform: uppercase;
+}
+.clear{
+	clear: both;
+	line-height: 0px;
+	height: auto;
+	margin: 0px;
+	padding: 0px;
+}
+.invisible{
+	display: none;
+}
+.bold{
+	font-weight: bold;
+}
+.bildlink{
+	background-image: none;
+	padding-left: 0px;
+}
+#sprungmenu{
+	display: none;
+}
+#einrichtungsbezeichnung{
+	display: none;
+}
+div.banner, div.banner_right{
+	text-align:center;
+	display: block;
+	
+	margin-top:10px;
+	margin-bottom:10px;
+}
+img.banner{
+	margin: auto;
+	margin-top:10px;
+	display:block;
+	width: 154px;
+}
+img.banner_right{
+	margin: auto;
+	margin-top:10px;
+	display:block;
+	width: 182px;
+}
+a.link_333{
+	background-image: url(/stylesheets/wiwi2/link_333.gif);
+	background-position: left center;
+	background-repeat:no-repeat;
+	padding-left: 14px;
+	display: block;
+	clear: both;
+	font-size: 0.625em;
+}
+a.link_333:hover{
+	text-decoration: underline;
+}
+
+/*--- Farben (bc = Hintergrundfarbe / fc = Schriftfarbe ) ---*/
+
+.bc_none{background-color:none;}
+.bc_fff{background-color:#fff;}
+.bc_ccc{background-color:#ccc;}
+.bc_prim{background-color:#003366;}
+.bc_sek{background-color:#008898;}
+
+.bc_a7a5a5{background-color:#a7a5a5;}
+.bc_ededed{background-color:#ededed;}
+.bc_d6d6d6{background-color:#d6d6d6;}
+
+.fc_prim{color:#003366;}
+.fc_sek{color:#008898;}
+.fc_fff{color:#fff;}
+.fc_333{color:#333;}
+.red{color:#ff3300;}
+.italic{font-style:italic;}
+
+/*--- Seitenaufbau ---*/
+
+#wrapper {
+	background-image: url(/stylesheets/wiwi2/bg_main.gif);
+	background-position: 50%;
+	min-width: 770px;
+	max-width: 970px;
+	margin: auto;
+	overflow:hidden;
+}
+
+#site {
+	background-image: url(/stylesheets/wiwi2/claimwwu.gif);
+	background-position: left bottom;
+	background-repeat:no-repeat;
+}
+#adresse {
+	display: none;
+}
+/*--- Kopf, Hauptteil und Fu� ---*/
+
+#head {
+	width: 100%;
+}
+
+#head_top {
+	width: 100%;
+	border-bottom: 2px solid #fff;
+}
+
+#head_middle {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+#head_bottom {
+	width: 100%;
+	border-top: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	margin: 0px;
+	padding: 0px;
+}
+
+#main {
+	width: 56%;
+	margin-left: 23%;
+	background-image: url(/stylesheets/wiwi2/a7a5a5_1px.gif);
+	background-position: right;
+	background-repeat:repeat-y;
+	border-bottom: 2px solid #fff;
+	border-top: 2px solid #fff;
+}
+
+#footer {
+	width: 100%;
+}
+#first_row {
+	width: 100%;
+}
+#second_row {
+	width: 100%;
+	float: left;
+}
+
+/*--- Spalten ---*/
+
+.left_column{
+	width: 23%;
+	float: left;
+}
+.center_column{
+	width: 56%;
+	float: left;
+}
+.right_column{
+	width: 21%;
+	float: right;
+}
+
+/*--- spezielle Angaben ---*/
+
+#head_top div.left_column {
+	height: 77px;
+}
+#head_top div.left_column img {
+	float: right;
+	margin-top: 10px;
+}
+#head_top div.center_column {
+	height: 77px;
+}
+#head_top div.center_column img {
+	float: left;
+	margin-top: 10px;
+}
+
+#head_middle div.left_column {
+	background-image: url(/stylesheets/wiwi2/kopfmotiv_links.jpg);
+	background-position: right;
+	height: 135px;
+	margin-bottom: 2px;
+	text-align: right;
+}
+#head_middle div.center_column {
+	background-image: url(/stylesheets/wiwi2/kopfmotiv_rechts.jpg);
+	height: 135px;
+	margin-bottom: 2px;
+}
+#head_middle div.right_column {
+	background-image: url(/images/layout/2px_fff.gif);
+	background-repeat:repeat-y;
+	text-align:center;
+	margin: auto;
+	height: 157px;
+}
+/*--- Sondernavigation Start ---*/
+#head_middle div.left_column_rowspan{
+	width: 79%;
+	clear:left;
+	height: 20px;
+}
+#head_middle div.left_column_rowspan ul{
+	float: left;
+}
+#head_middle div.left_column_rowspan ul li{
+	float: left;
+	border-right: 2px solid #fff;
+}
+#head_middle div.left_column_rowspan ul li a{
+	background-image: url(/stylesheets/wiwi2/navi_pfeil.gif);
+	background-repeat:no-repeat;
+	font-size: 0.68em;
+	letter-spacing: -0.07em;
+	line-height:20px;
+	display: block;
+	height: 20px;
+	padding: 0px 12px 0px 18px;
+	color:#fff;
+}
+#head_middle div.left_column_rowspan ul li a:hover{
+	background-color: #008898;
+}
+#head_middle div.left_column_rowspan ul li a.active{
+	background-color: #008898;
+}
+/*--- Sondernavigation Stop ---*/
+
+/*--- Hauptnavigation Start ---*/
+#head_bottom div.left_column {
+	height: 20px;
+	width: 100%;
+}
+#head_bottom div.left_column ul{
+	float: left;
+}
+#head_bottom div.left_column ul li{
+	float: left;
+	border-right: 2px solid #fff;
+}
+#head_bottom div.left_column ul li a{
+	background-image: url(/stylesheets/wiwi2/navi_pfeil.gif);
+	background-repeat:no-repeat;
+	font-size: 0.68em;
+	font-weight:700;
+	line-height:20px;
+	display: block;
+	height: 20px;
+	padding: 0px 12px 0px 18px;
+	color:#fff;
+}
+#head_bottom div.left_column ul li a:hover{
+	background-color: #008898;
+}
+#head_bottom div.left_column ul li a.active{
+	background-color: #008898;
+}
+#head_bottom div.left_column a.language{
+	margin: 4px 10px 5px 10px;
+	float: right;
+}
+/*--- Hauptnavigation Stop ---*/
+
+/*--- Inhalt Start ---*/
+
+/*--- Inhalt linke Spalte Start ---*/
+#main div.left_column {
+	margin-left: -41%;
+	width: 41%;
+	line-height: 12pt;
+	padding: 10px 0px 50px 0px;
+}
+#main div.left_column h2.navigation {
+	text-transform: uppercase;
+	display: inline;
+	padding: 0px 10px 0px 12px;
+	margin-bottom: 5px;
+	display:block;
+	font-size: 0.68em;
+}
+#main div.left_column p.kontakt {
+	display: block;
+	padding: 0px 10px 0px 12px;
+	margin-bottom: 50px;
+	font-size: 0.68em;
+}
+#main div.left_column a.link {
+	background-image: url(/stylesheets/wiwi2/link_sek.gif);
+	background-position: left center;
+	background-repeat:no-repeat;
+	padding-left: 14px;
+}
+#main div.left_column a.mail {
+	background-image: url(/stylesheets/wiwi2/link_mail.gif);
+	background-position: left center;
+	background-repeat:no-repeat;
+	padding-left: 14px;
+}
+#main div.left_column ul.service {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	font-size:0.62em;
+	line-height:16pt;
+	display: block;
+	padding: 0px 10px 0px 12px;
+}
+#main div.left_column ul.service li a {
+	background-position: left center;
+	background-repeat:no-repeat;
+	padding-left: 20px;
+}
+#main div.left_column ul.service li a:hover {
+	text-decoration: underline;
+}
+#main div.left_column ul.service li a.hompage {
+	background-image: url(/stylesheets/wiwi2/homepage.gif);
+}
+#main div.left_column ul.service li a.kontakt {
+	background-image: url(/stylesheets/wiwi2/kontakt.gif);
+}
+#main div.left_column ul.service li a.sitemap {
+	background-image: url(/stylesheets/wiwi2/sitemap.gif);
+}
+#main div.left_column ul.navigation {
+	margin-bottom: 50px;
+	font-size:0.6875em;
+	line-height:16pt;
+	display: block;
+	padding: 0px 10px 0px 12px;
+}
+#main div.left_column ul.navigation li a {
+	background-image: url(/stylesheets/wiwi2/link_sek.gif);
+	background-position: left 2px;
+	background-repeat:no-repeat;
+	padding-left: 20px;
+}
+#main div.left_column ul.navigation li a:hover {
+	text-decoration: underline;
+}
+#main div.left_column ul.navigation ul {
+	line-height:16pt;
+	margin-left: -13px;
+	margin-right: -10px;
+	background-color:#dfdede;
+	display: block;
+	padding: 0px 20px 0px 34px;
+}
+#main div.left_column ul.navigation li ul li a {
+	background-image: url(/stylesheets/wiwi2/subnav.gif);
+	background-position: left 7px;
+	background-repeat:no-repeat;
+	padding-left: 20px;
+	display: inline-block;
+}
+#main div.left_column ul.navigation li ul li a:hover {
+	text-decoration: underline;
+}
+	
+/*--- Inhalt linke Spalte Stop ---*/
+
+
+/*--- Inhalt mittlere Spalte Start ---*/
+#main div.center_column {
+	width: 100%;
+	padding: 10px 0px 0px 0px;
+}
+#main div.center_column h1 {
+	display: block;
+	margin:  0px 10px 21px 10px;
+	font-size:0.75em;
+	line-height:15px;
+	font-weight:700;
+}
+#main div.center_column h1.start {
+	margin:  20px 10px 28px 10px;
+	line-height:35px;
+	border-top: 1px solid #a7a5a5;
+	border-bottom: 1px solid #a7a5a5;
+}
+#main div.center_column h2 {
+	display: block;
+	margin:  28px 10px 28px 10px;
+	font-size:0.75em;
+	line-height:35px;
+	font-weight:700;
+	border-bottom: 1px solid #a7a5a5;
+	color: #008898;
+}
+#main div.center_column h3 {
+	display: block;
+	font-size:0.68em;
+	line-height:15pt;
+	font-weight:700;
+	margin-bottom: 10px;
+}
+#main div.center_column h3 a {
+	color: #008898;
+	background-image: url(/stylesheets/wiwi2/link_pri.gif);
+	background-position: left 2px;
+	background-repeat:no-repeat;
+	padding-left: 11px;
+}
+#main div.center_column h3 a:hover {
+	text-decoration: underline;
+}
+#main div.center_column div {
+	display: block;
+	padding: 0px 10px 0px 10px;
+	margin-bottom: 20px;
+}
+#main div.center_column div div {
+	padding: 0px 0px 0px 0px;
+}
+#main div.center_column div.aktuelles div p, #main div.center_column div.aktuelles div ul, #main div.center_column div.zitat div p, #main div.center_column div.rss div p{
+	font-size: 0.68em;
+	line-height: 14pt;
+}
+#main div.center_column div.text div{
+	font-size: 0.68em;
+	line-height: 14pt;
+}
+#main div.center_column div.artikel div h3{
+	font-size: 100%;
+}
+#main div.center_column div.artikel div h4{
+	font-size: 100%;
+}
+#main div.center_column div.artikel div.image {
+	display:inline;
+	width: 200px;
+	float: left;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	line-height:12px;
+}
+#main div.center_column div.artikel div.image img {
+	width: 100%;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+#main div.center_column div.artikel div.image h4 {
+	font-size: 130%;
+	color: #008898;
+	font-weight:normal;
+}
+#main div.center_column div div p a, #main div.center_column div div ul li a {
+	display: inline-block;
+	color: #008898;
+	background-image: url(/stylesheets/wiwi2/link.gif);
+	background-position: left 5px;
+	background-repeat:no-repeat;
+	padding-left: 11px;
+}
+#main div.center_column div div ul {
+	margin-left: 40px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	clear: both;
+}
+#main div.center_column div div ul li {
+	line-height: 15pt;
+	background-position: left 7pt;
+	background-image: url(/stylesheets/wiwi2/list.gif);
+	background-repeat:no-repeat;
+	padding-left: 11px;
+}
+#main div.center_column div div ul li a {
+	line-height: 15pt;
+	background-image: none;
+	padding-left: 0px;
+}
+#main div.center_column div div p a {
+	background-position: left 5px;
+}
+#main div.center_column div div p a.bildlink{
+	background-image: none;
+	padding-left: 0px;
+}
+#main div.center_column div div p a.without {
+	background-image: none;
+	padding-left: 0px;
+}
+#main div.center_column div div p a.weitere {
+	background-position: left 6px;
+	display: block;
+	border-top: 1px solid #a7a5a5;
+	padding-top: 10px;
+	background-position: left 15px;
+}
+#main div.center_column div div p a.grafik {
+	display: inline-block;
+	background-image: none;
+	padding-left: 0px;
+	float:left;
+}
+#main div.center_column div div p img, #main div.center_column div div p p img, #main div.center_column div.artikel div p a.bildlink img {
+	float:left;
+	margin: 6px 10px 4px 0px;
+}
+#main div.center_column div.rss div p img {
+	margin: 5px 5px 4px 0px;
+}
+#main div.center_column div div p a.extern {
+	background-image: url(/stylesheets/wiwi2/link_extern.gif);
+}
+#main div.center_column div div p a:hover, #main div.center_column div div ul li a:hover {
+	text-decoration:underline;
+}
+
+#main div.center_column div.artikel div.zitat{
+	border: 1px solid #008898;
+	padding: 6px;
+}
+#main div.center_column div.artikel div.zitat h3{
+	display: block;
+	margin-top: -17px;
+}
+#main div.center_column div.artikel div.zitat h3 span{
+	display:inline-block;
+	padding: 0px 10px;
+	background-color: #ffffff;
+	color: #008898;
+	text-transform:uppercase;
+}
+#main div.center_column div.artikel div ul.linklist li a{
+	background-position: left center;
+}
+#main div.center_column div.artikel div table{
+	width: 100%;
+	background-color: #fff;
+	text-align:left;
+}
+#main div.center_column div.artikel div table th{
+	background-color: #e9e8e8;
+}
+#main div.center_column div.artikel div table td{
+	background-color: #f2f1f1;
+}
+#main div.center_column div.artikel div table th, #main div.center_column div.artikel div table td{
+	width: 30%;
+	vertical-align:top;
+	line-height: 1.4em;
+	padding: 4px;
+}
+#main div.center_column div.artikel div table td span{
+	line-height: 1.4em;
+}
+#main div.center_column div.artikel div table td span.space{
+	display: inline-block;
+	margin-bottom: 8px;
+}
+#main div.center_column div.artikel div table td a{
+	line-height: 1.6em;
+	padding-left: 13px;
+}
+#main div.center_column div.artikel div table td a.pdf{
+	background-image: url(/stylesheets/wiwi2/link_pdf.gif);
+}
+#main div.center_column div.artikel div table th.narrow{
+	width: 20%;
+}
+#main div.center_column div.artikel div table th.wide{
+	width: 30%;
+}
+#main div.center_column div.main_service {
+	line-height: 16px;
+	height: 20px;
+	margin-bottom: 0px;
+	margin-top: 50px;
+}
+#main div.center_column div.main_service div {
+	margin-bottom: 0px;
+}
+#main div.center_column div.main_service div.left {
+	float: left;
+}
+#main div.center_column div.main_service div.right {
+	float: right;
+}
+#main div.center_column div.main_service span {
+	font-size:0.68em;
+}
+#main div.center_column div.main_service div a {
+	font-size:0.68em;
+}
+#main div.center_column div.main_service div a img, #main div.center_column div.main_service div form input {
+	background-color: #008898;
+}
+#main div.center_column div.main_service div form input, #main div.center_column div.main_service div form {
+	display: inline;
+}
+#main div.center_column div.main_service div a.back {
+	background-image: url(/stylesheets/wiwi2/back.gif);
+	background-position: left 3px;
+	background-repeat:no-repeat;
+	padding-left: 14px;
+}
+#main div.center_column div.main_service div a.top {
+	background-image: url(/stylesheets/wiwi2/back.gif);
+	background-position: left 3px;
+	background-repeat:no-repeat;
+	padding-left: 14px;
+}
+#main div#Sitemapausgabe {
+	margin-left: 20px;
+}
+#main div#Sitemapausgabe h2 {
+	border-bottom: none;
+	margin-top: 15px;
+	margin-bottom: 0px;
+}
+#main div#Sitemapausgabe h2 a {
+	color:#000;
+	font-weight:700;
+	background-image: url(/stylesheets/wiwi2/list.gif);
+	background-position: left 6px;
+	background-repeat:no-repeat;
+	padding-left: 20px;
+	line-height: 18px;
+}
+#main div#Sitemapausgabe ul {
+	margin-left: 40px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+#main div#Sitemapausgabe ul li {
+	padding-left: 15px;
+}
+#main div#Sitemapausgabe ul li a {
+	font-size: 0.68em;
+	line-height: 18pxpt;
+	
+}
+/*--- Inhalt mittlere Spalte Stop ---*/
+
+
+
+/*--- Inhalt rechte Spalte Start ---*/
+#main div.right_column {
+	margin-right: -37.5%;
+	width: 37.5%;
+	line-height: 12pt;
+	padding: 10px 0px 50px 0px;
+	
+}
+#main div.right_column h2,#main div.right_column label,#main div.right_column div input {
+	font-size: 0.625em;
+}
+#main div.right_column div.search h2.suche {
+	text-transform: uppercase;
+	background-image: url(/stylesheets/wiwi2/suche.gif);
+	background-position: right center;
+	background-repeat:no-repeat;
+	padding-right: 14px;
+	display: inline;
+}
+.searchterm{
+	border: 1px solid #666;
+	color: #666;
+	width: 11.27em;
+	padding: 3px 1px;
+	margin-top: 6px;
+	float: left;
+}
+.searchbutton{
+	float: left;
+	margin-top: 5px;
+	margin-left:6px;
+}
+#main div.right_column div {
+	display: block;
+	padding: 0px 10px 0px 12px;
+	margin-bottom: 20px;
+}
+#main div.right_column div.schnellzugriff {
+	margin-bottom: 15px;
+	background-color: #fff;
+	overflow: hidden;
+}
+#main div.right_column div.schnellzugriff h2 {
+	text-transform: uppercase;
+	background-image: url(/stylesheets/wiwi2/schnellzugriff.gif);
+	background-position: right center;
+	background-repeat:no-repeat;
+	padding-right: 14px;
+	display: inline;
+}
+#main div.right_column div.termine h2 {
+	text-transform: uppercase;
+}
+#main div.right_column div.schnellzugriff h3 {
+	font-size: 0.625em;
+	margin-top: 10px;
+	padding-left: 5px;
+	display: none;
+}
+#main div.right_column div.schnellzugriff ul{
+	font-size: 0.625em;
+	padding: 0px 5px 5px 10px;
+	display: none;
+}
+#main div.right_column div.schnellzugriff:hover ul, #main div.right_column div.schnellzugriff:hover h3 {
+	display: block;
+	background-color:#ededed;
+}
+#main div.right_column div.schnellzugriff ul li a {
+	background-image: url(/stylesheets/wiwi2/link_pri.gif);
+	background-position: left 2px;
+	background-repeat:no-repeat;
+	padding-left: 14px;
+	line-height: 20px;
+	color: #333;
+}
+#main div.right_column div.schnellzugriff ul li a:hover {
+	text-decoration: underline;
+}
+#main div.right_column div.termine ul li {
+	font-size: 0.625em;
+	margin-bottom: 15px;
+}
+#main div.right_column div.termine ul li a {
+	background-image: url(/stylesheets/wiwi2/link_pri.gif);
+	background-position: left 2px;
+	background-repeat:no-repeat;
+	padding-left: 14px;
+	color: #008898;
+}
+#main div.right_column div.termine ul li a:hover {
+	text-decoration: underline;
+}
+#main div.right_column div.termine a.termine {
+	background-image: url(/stylesheets/wiwi2/link.gif);
+	background-position: left 2px;
+	background-repeat:no-repeat;
+	padding-left: 14px;
+	font-size: 0.625em;
+}
+#main div.right_column div.termine a.termine:hover {
+	text-decoration: underline;
+}
+
+/*--- Inhalt rechte Spalte Stop ---*/
+
+
+
+
+/*--- Inhalt Stop ---*/
+
+/*--- Fuss Start ---*/
+
+#first_row div.left_column {
+	height: 20px;
+}
+#first_row div.right_column {
+	height: 20px;
+}
+#second_row div.left_column {
+	height: 20px;
+}
+#second_row div.center_column {
+	font-size:0.56em;
+	line-height:20px;
+	text-align:right;
+}
+#second_row div.center_column span {
+	
+}
+#second_row div.center_column a:hover {
+	text-decoration: underline;
+}
+
+/*--- Fuss Stop ---*/

@@ -7,9 +7,9 @@
 	<title>Jobbörse der Wirtschaftswissenschaftlichen Fakultät der Universität Münster</title>	<meta name="description" content='Homepage der Wirtschaftswissenschaftlichen Fakultät der Universität Münster' />
 	<meta name="author" content="Wirtschaftswissenschaftliche Fakultät der Universität Münster" />
 	<meta name="robots" content="all" />
-	<%= stylesheet_link_tag "wiwi/screen", :media => "screen", :title => "WWU Bildschirm-Ansicht" %>
+	<%= stylesheet_link_tag "wiwi2/screen", :media => "screen", :title => "WWU Bildschirm-Ansicht" %>
 	<link rel="alternate stylesheet" href="<%= stylesheet_path "wiwi/print" %>" type="text/css" media="screen" title="Druckvorschau" />
-	<%= stylesheet_link_tag "wiwi/print", :media => "print" %>
+	<%= stylesheet_link_tag "wiwi2/print", :media => "print" %>
 	<link rel="shortcut icon" href="http://www1.wiwi.uni-muenster.de/fakultaet/favicon.ico" type="image/x-icon" />
 	<%= auto_discovery_link_tag(:atom, formatted_list_jobs_url(:atom)) %>
 	<!--[if lt IE 7]>
@@ -17,100 +17,178 @@
 	<![endif]-->
 	<%= javascript_include_tag :defaults %>
 </head>
-<body>
-	<div id="wrapper">
-		<div id="outer">
-			<div id="inner">
-				<div id="left">
-					<div id="wiwi_logo">
-						<%= link_to image_tag("/images/wiwi/fakultaet/wiwi_logo_deutsch.gif", :alt => "Logo Wirtschaftswissenschaftlichen Fakultät der Universität Münster"), "http://www.wiwi.uni-muenster.de/" %>
-					</div>
-					<div id="submenu">
-						<h2 class="invisible">Themennavigation</h2>
-						<ul>
-							<li class="icon">
-								<strong>Wirtschafts-<br />
-								wissenschaftliche<br />
-								Fakultät der<br />
-								Universität Münster</strong><br />
-								Universitätsstraße 14-16<br />
-								D-48143 Münster
-							</li>
-						</ul>
-						<div id="add_links"><!-- Hier können Additionals für die linke Seite hinzugefügt werden -->
-							
-							<%= image_tag "wiwi/fakultaet/banner/cdclogo.gif", :align => "center" %><br /><br />
-						</div>
-						<ul id="globalenavigation">
-							<li><%= link_to "Startseite", index_path, :class => "startseite" %></li>
-							<li><%= link_to "Impressum", legal_path, :class => "impressum" %></li>
-						</ul>
-					</div><!-- #submenu end -->
-				</div><!-- #left end -->
-				<div id="center">
-					<div id="kopfmotiv">
-						<img src="/images/wiwi/fakultaet/kopfmotiv.jpg" alt="Kopfmotiv der Seite mit Fotoausschnitt des Schlosses" />
-					</div><!-- #kopfmotiv end -->
-					<div id="mainnavigation">
-						<h2 class="invisible">Hauptnavigation</h2>
-						<ul id="mainmenu">
-							<li><%= link_to "Startseite", index_url %></li>
+
+<body class="bc_ccc"><a name="top"></a>
+	<p id="sprungmenu" class="invisible">
+		<strong>Springe direkt zu:</strong> <a href="#submenu">Themennavigation</a> | <a href="#mainmenu">Hauptnavigation</a> | <a href="#main">Inhaltsbereich</a> | <a href="#volltextsuche" onclick="location = this.href; focusElem('searchterm'); return false;">Suchfunktion</a> | <a href="#additional">Weitere Informationen, Links und <span xml:lang="en" lang="en">Downloads</span></a> | <a href="#footer">Service-Funktionen</a>
+
+	</p>
+	<div id="wrapper" class="bc_ededed">
+        <div id="site">
+            <div id="head" class="bc_fff">
+                <div id="head_top">
+                    <div class="left_column">
+                        <a href="http://www.uni-muenster.de"><img src="/stylesheets/wiwi2/wwu_logo_left.gif" /></a>
+                    </div>
+                    <div class="center_column">
+
+                        <a href="http://www.uni-muenster.de"><img src="/stylesheets/wiwi2/wwu_logo_right.gif" /></a>
+                    </div>
+                    <div class="right_column">
+                    
+                    </div><div class="clear"></div>
+                </div>
+<div class="clear"></div>
+                <div id="head_middle">
+                    <div class="left_column">
+                        
+                    </div>
+
+                    <div class="center_column">
+                        
+                    </div>
+                    <div class="right_column bc_prim fc_fff">
+                        <a href="/fakultaet/index.php"><img src="/stylesheets/wiwi2/wiwi_logo_deutsch.gif" /></a>                    </div>
+                    <div class="left_column_rowspan bc_a7a5a5 fc_fff">
+              
+                            <ul id="mainmenu">
+							<li><%= link_to "Übersicht", index_url %></li>
 							<li><%= link_to "Praktika", list_intern_jobs_path %></li>
-                                                        <li><%= link_to "Werkstudenten", list_student_jobs_path %></li>
+                                                        <li><%= link_to "Nebenjobs", list_student_jobs_path %></li>
                                                         <li><%= link_to "Abschlussarbeiten", list_degree_jobs_path %></li>
                                                         <li><%= link_to "Berufseinstieg", list_graduate_jobs_path %></li>
 							<li><%= link_to "Kontakt für Unternehmen", contact_path %></li>
                                                 </ul>
-					</div>
-					<div class="clearall"></div>
-					<p id="einrichtungsbezeichnung">Wirtschaftswissenschaftliche Fakultät der Universität Münster</p>
-					<div id="main">
-						<div id="text">
-							<h1 id="title"><%= yield :headline %></h1>
-								<%= yield %>																																																									
-							<div class="clearall"></div>
-						</div><!-- #text end -->
-					</div><!-- #main end -->
-				</div><!-- #center end -->
-				<div id="right">
-					<div class="inner">
-						<a name="additional"></a>
-						<h2 class="linksaussen">Weitere Informationen, Links und <span xml:lang="en" lang="en">Downloads</span></h2>
-						<div id="wwu_logo">
-							<a href="http://www.uni-muenster.de" title="Zur Startseite der Westfälischen Wilhelms-Universität Münster" target="_blank"><img src="/images/wiwi/wwu_logo_deutsch.gif" alt="Logo der Westfälischen Wilhelms-Universität Münster" /></a>
-						</div>
-						<h3>In Zusammenarbeit mit</h3>
-						<div id="add_rechts"><!-- Hier können Additionals für die rechte Seite hinzugefügt werden -->
-                                                    <p>
-                                                        <%= link_to image_tag("wiwi/fs_wiwi.gif"), "http://www.wi.uni-muenster.de/fs/" %><br /><br />
-                                                        <%= link_to image_tag("wiwi/fakultaet/banner/alumnium.gif"), "http://www.alumnium.de/" %><br /><br />
-                                                    </p>
-						</div>
-					</div><!-- .inner end -->
-				</div><!-- #right end -->
-				<div class="clearall"></div>
-			</div><!-- #inner end -->
-		</div><!-- #outer end -->
-		<hr />
-		<div id="adresse"> <!-- Nur in der Druckversion sichtbar -->
-			<p>
-				<strong>Westfälische Wilhelms-Universität Münster<br />
-				Wirtschaftswissenschaftliche Fakultät</strong><br />
-				Universitätsstraße 14-16<br />
-				48143 Münster<br />
-				Tel.: +49 (0)251 / 83 - 2 29 10 <br />
-				Fax: +49 (0)251 / 83 - 2 83 99<br />
-				E-Mail: dekanat@wiwi.uni-muenster.de<br />
-			</p>
-		</div>
-		<div id="footer">
-			<h2 class="linksaussen">Service-Funktionen</h2>
-			<div id="functions">
-				<%= yield :footer_left %>
-				<p>&copy; <%=h Time.now.year %> Wirtschaftswissenschaftliche Fakultät Münster</p>
-			</div>
+                   
+                    </div><div class="clear"></div>
+                </div>
+<div class="clear"></div>
+            <!--    <div id="head_bottom" class="bc_prim fc_fff">
+                    <div class="left_column"><a name="mainmenu"></a>
 
-		</div><!-- #footer end -->
-	</div><!-- #wrapper end -->
+                        <ul>
+                           	<li><a  href="/fakultaet/studium/">Studieren</a></li>
+							<li><a  href="/fakultaet/forschung/">Forschen</a></li>
+							<li><a  href="/fakultaet/organisation/">Organisation</a></li>
+							<li><a  href="/fakultaet/praxis/">Praxis</a></li>
+							<li><a  href="/fakultaet/international/">International</a></li>
+
+							<li><a  href="/fakultaet/initiativen/">Initiativen</a></li>
+							<li><a  href="/fakultaet/medien/">Medien</a></li>
+							<li><a  href="/fakultaet/service/">Service</a></li>
+                        </ul>
+                        <a class='english language' href='?sprache=eng'PHPSESSID=89b8c05e119e9e295cc33663e58a7eef"><img src='/stylesheets/wiwi2/lang_flag_en.gif' /></a>                    </div><div class="clear"></div>
+                </div>-->
+<div class="clear"></div>
+
+            </div>
+<div class="clear"></div>
+            <div id="main" class="fc_333 bc_fff">
+                <div class="left_column bc_none">
+                	<a name="submenu"></a>
+						<h2 class="invisible">Themennavigation</h2>
+													<p class="kontakt">
+                        	<strong>Wirtschaftswissenschaftliche Fakult&auml;t der Universit&auml;t M&uuml;nster</strong><br />
+
+                        	<a class="link" href="/fakultaet/service/anfahrt/index.php">Universit&auml;tsstra&szlig;e 14-16</a><br />
+                        	D-48143 M&uuml;nster<br />
+                        	<a href="mailto:info@wiwi.uni-muenster.de" class="mail">info@wiwi.uni-muenster.de</a>
+							</p>
+						                        																																										                	<div class="banner">
+                    					<%= image_tag "wiwi/fakultaet/banner/cdclogo.gif", :align => "center" %> <br />
+
+							<!--<br />
+							<a href="/fakultaet/international/aacsb/index.php"><img src="/stylesheets/wiwi2/aacsb_blue.gif" alt="" name="rankings" /></a><br />
+							<br />
+							<a href="/fakultaet/initiativen/index.php"><img src="/stylesheets/wiwi2/csi.gif" height="106" width="160" alt="Logo des Andreas Dombret-Center for Students Initiatives" name="rankings" /></a><br />
+							<br />
+							<a href="/fakultaet/BCM/index.php"><img src="/stylesheets/wiwi2/bcm.gif" height="150" width="160" alt="Logo der Messe BusinessContacts Münster 2008" name="rankings" /></a>-->
+                                                        
+                                                    </div>
+                    <ul class="service">
+                        <li><a class="hompage" href="/fakultaet/index.php">Startseite</a></li>
+
+                        <li><a class="kontakt" href="/fakultaet/kontakt/index.php">Kontakt</a></li>
+                        <li><a class="sitemap" href="/fakultaet/sitemap/index.php">Sitemap</a></li>
+                    </ul>
+                </div>
+<p id="einrichtungsbezeichnung">Wirtschaftswissenschaftliche Fakult&auml;t der Universit&auml;t M&uuml;nster</p>
+
+
+<!-- Beginn Main Content -->
+<div class="center_column bc_none">
+
+    <!-- Seitenüberschrift -->
+    <h1 id="title" class="start">
+            <%= yield :headline %>
+    </h1>
+
+    <!-- Seiteninhalt -->
+    <div class="text">
+	<%= yield %>																																																									
+	<div class="clearall"></div>
+    </div>
+
+</div>
+<!-- Ende Main Content -->
+
+<div class="right_column bc_none">
+<a name="additional"></a>
+
+			
+<!--<div class="schnellzugriff">
+<h2>Schnellzugriff</h2>
+
+<h3>TOP-Adressen</h3>	<ul class="linkliste">
+		<li><a href="/fakultaet/organisation/dekanat/index.php">Dekanat</a></li><li><a href="/fakultaet/studium/vorlesungsverzeichnis/index.php">Vorlesungs&shy;verzeichnis</a></li><li><a href="/fakultaet/studium/studienberatung/index.php">Studienberatung</a></li><li><a target="_blank" title="Link öffnet Inhalt in neuem Fenster" href="http://www.pam.uni-muenster.de/">Prüfungsamt</a></li><li><a target="_blank" title="Link &ouml;ffnet Inhalt in neuem Fenster" href="http://www.wiwi.uni-muenster.de/ivv/">Systemadministration</a></li><li><a target="_blank" title="Link öffnet Inhalt in neuem Fenster" href="http://www.wiwi.uni-muenster.de/bibliothek/">Fachbereichs&shy;bibliothek</a></li><li><a target="_blank" title="Link öffnet Inhalt in neuem Fenster" href="http://www.wiwi.uni-muenster.de/fs/">Fachschaft</a></li><li><a target="_blank" title="Link &ouml;ffnet Inhalt in neuem Fenster" href="http://www.alumnium.de">AlumniUM</a></li>	</ul>
+
+<h3>Institute und Lehrstühle</h3>	<ul class="linkliste">
+		<li><a href="/fakultaet/organisation/betriebswirtschaftslehre/index.php">Betriebs&shy;wirtschaftslehre</a></li><li><a href="/fakultaet/organisation/volkswirtschaftslehre/index.php">Volks&shy;wirtschaftslehre</a></li><li><a href="/fakultaet/organisation/wirtschaftsinformatik/index.php">Wirtschafts&shy;informatik</a></li><li><a href="/fakultaet/organisation/oekonomischebildung/index.php">Ökonomische Bildung</a></li>	</ul>
+</div>-->
+
+<div class="banner_right">
+<p><h2>In Kooperation mit:</h2></p>
+     <%= link_to image_tag("wiwi/fs_wiwi.gif"), "http://www.wi.uni-muenster.de/fs/" %><br /><br />
+     <%= link_to image_tag("wiwi/fakultaet/banner/alumnium.gif"), "http://www.alumnium.de/" %><br /><br />
+
+</div>
+                </div><div class="clear"></div>
+            </div>
+<div class="clear"></div>
+            <div id="footer">
+			<a name="footer"></a>
+                <div id="first_row" class="bc_d6d6d6 fc_333">
+                    <div class="left_column">
+
+                    
+                    </div>
+                    <div class="center_column">
+                    
+                    </div>
+                    <div class="right_column">
+                    
+                    </div><div class="clear"></div>
+                </div>
+<div class="clear"></div>
+                <div id="second_row" class="bc_fff fc_333">
+                    <div class="left_column">
+
+                    
+                    </div>
+                    <div class="center_column">
+                    	<a href="/fakultaet/impressum/index.php">Impressum</a> |
+                        <span> © 2008 Wirtschaftswissenschaftliche Fakultät Münster</span>
+                    </div>
+                    <div class="right_column">
+                    
+                    </div><div class="clear"></div>
+
+                </div> 
+<div class="clear"></div>
+            </div>
+<div class="clear"></div>
+</div>
+</div>
+
 </body>
 </html>
