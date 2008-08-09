@@ -7,12 +7,12 @@
 <p>
   
 <!--<%= public_job.teaser_text %>-->
-	<span class="nowrap noprint">
+	
 <!--<%= link_to image_tag("wiwi/icons/link2.gif")+" Details anzeigen", job_path(public_job), :title => "Details anzeigen" %>-->
-                &nbsp;&nbsp;&nbsp;
+                <h4>
                 <%= public_job.company %> | 
-                <%= link_to " Details anzeigen", job_path(public_job), :title => "Details anzeigen" %>
+                <%= link_to image_tag("wiwi/icons/link2.gif")+" Details anzeigen", job_path(public_job), :title => "Details anzeigen" %>
 		<%= " | "+link_to("Stellenausschreibung herunterladen", public_job.attachment.public_filename) if public_job.attachment %>
-                | Vom <%=h public_job.created_at.to_s(:long) %>
-	</span>
+              | Vom <%=h public_job.created_at.to_s(:long) %> </h4>
+	
 </p>
