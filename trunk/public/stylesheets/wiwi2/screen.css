@@ -224,12 +224,13 @@ a.link_333:hover{
 	background-image: url(/stylesheets/wiwi2/navi_pfeil.gif);
 	background-repeat:no-repeat;
 	font-size: 0.68em;
-	letter-spacing: -0.07em;
+	/*letter-spacing: -0.03em;*/
 	line-height:20px;
 	display: block;
 	height: 20px;
 	padding: 0px 12px 0px 18px;
 	color:#fff;
+        font-weight: 600;
 }
 #head_middle div.left_column_rowspan ul li a:hover{
 	background-color: #008898;
@@ -467,7 +468,7 @@ a.link_333:hover{
 }
 #main div.center_column div.text div.image img {
 	width: 100%;
-	margin-top: 6px;
+	margin-top: 0px;
 	margin-bottom: 6px;
 }
 #main div.center_column div.text div.image h4 {
@@ -566,10 +567,10 @@ a.link_333:hover{
 	background-color: #e9e8e8;
 }
 #main div.center_column div.text div table td{
-	background-color: #f2f1f1;
+	/*background-color: #f2f1f1;*/
+        font-size: 1.0em;
 }
 #main div.center_column div.text div table th, #main div.center_column div.text div table td{
-	width: 30%;
 	vertical-align:top;
 	line-height: 1.4em;
 	padding: 4px;
@@ -583,7 +584,7 @@ a.link_333:hover{
 }
 #main div.center_column div.text div table td a{
 	line-height: 1.6em;
-	padding-left: 13px;
+	/*padding-left: 13px;*/
 }
 #main div.center_column div.text div table td a.pdf{
 	background-image: url(/stylesheets/wiwi2/link_pdf.gif);

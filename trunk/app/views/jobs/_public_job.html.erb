@@ -1,5 +1,5 @@
 <h3>
-	<%= image_tag "wiwi/icons/link1.gif" %>
+	<%= image_tag "/stylesheets/wiwi2/link_sek.gif" %>
 <!-- <%= link_to public_job.title+" bei "+public_job.company, job_path(public_job) %> -->
  <%= link_to public_job.title, job_path(public_job)  %>
 
@@ -8,10 +8,10 @@
   
 <!--<%= public_job.teaser_text %>-->
 	
-<!--<%= link_to image_tag("wiwi/icons/link2.gif")+" Details anzeigen", job_path(public_job), :title => "Details anzeigen" %>-->
+<!--<%= link_to image_tag("/stylesheets/wiwi2/link_sek.gif")+" Details anzeigen", job_path(public_job), :title => "Details anzeigen" %>-->
                 <h4>
                 <%= public_job.company %> | 
-                <%= link_to image_tag("wiwi/icons/link2.gif")+" Details anzeigen", job_path(public_job), :title => "Details anzeigen" %>
+                <%= link_to image_tag("/stylesheets/wiwi2/link_sek.gif")+" Details anzeigen", job_path(public_job), :title => "Details anzeigen" %>
 		<%= " | "+link_to("Stellenausschreibung herunterladen", public_job.attachment.public_filename) if public_job.attachment %>
               | Vom <%=h public_job.created_at.to_s(:long) %> </h4>
 	
