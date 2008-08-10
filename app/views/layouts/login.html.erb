@@ -3,7 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
 <head>
-	<title>WiWi Jobs - Administrationsbereich</title>
+	<title>Administrationsbereich: Jobbörse der Wirtschaftswissenschaftlichen Fakultät der Universität Münster</title>
 	<%= stylesheet_link_tag 'login', :media => "screen" %>
 	<!--[if IE]>
 	<%= stylesheet_link_tag 'iehacks', :media => "screen" %>
@@ -21,10 +21,12 @@
 		<div id="content">
 			<%= render :partial => "shared/display_flash" %>
 			<%= yield  %>
-		</div><!-- Ende content -->
-
-	</div><!-- Ende wrapper  -->
-
+                        <%= link_to "Zugangsdaten anfordern", contact_path %>
+		</div>
+                <!-- Ende content -->
+	</div>
+        <!-- Ende wrapper  -->
+        
 	<script type="text/javascript">
 	//<![CDATA[
 		init()
