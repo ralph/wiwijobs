@@ -11,11 +11,12 @@
 		<%-#= image_tag "wiwi/fakultaet/praktika.jpg" -%>
 	</div>
 	<p>
-          Herzlich Willkommen bei <i>WiWi Jobs</i>, der Jobbörse für Münsteraner WiWi-Studenten.
+          Herzlich Willkommen bei der Job- und Praktikumsbörse der <a href="http://www.wiwi.uni-muenster.de">Wirtschaftswissenschaftlichen
+          Fakultät der Universität Münster</a> in Zusammenarbeit mit der <a href="http://www.wi.uni-muenster.de/fs">Fachschaft WiWi</a>.
         </p>
         <p>
           Hier finden Studierende und Absolventen der Wirtschaftswissenschaftlichen Fakultät
-          aktuelle Angebote für Praktika, Abschlussarbeiten sowie den Berufseinstieg.
+          aktuelle Angebote für Praktika, Nebenjobs, Abschlussarbeiten sowie den Berufseinstieg.
 	</p>
 	<div class="clearall" style="clear:both;"></div>																																								 
 	<h2>Die letzten Angebote aus dem Bereich: <%= collection_select :category, :id, JobCategory.find(:all), :id, :title_with_number_of_jobs, {:prompt => "alle"}, { :id => "jobs_filter" } %></h2>
