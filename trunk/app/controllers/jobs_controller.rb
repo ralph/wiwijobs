@@ -30,34 +30,22 @@ class JobsController < ApplicationController
     end
   end
   
-  def list_degree
-    redirect_to :action => 'list', :job_type_id => 1
-  end
-  
-  def list_graduate
-    redirect_to :action => 'list', :job_type_id => 3
-  end
-
-  def list_intern
-    redirect_to :action => 'list', :job_type_id => 2
-  end
-
- def list_student
-    redirect_to :action => 'list', :job_type_id => 4
-  end
-  
   # GET /jobs;list
   # GET /jobs.xml;list
   def list
     params[:page] ||= 1
     if params[:job_type_id] 
-      @job_type_id=params[:job_type_id]
-    else 
-      @job_type_id=2
+      #Hier hole ich den JobType, denn kannst du dann auch im View benutzen
+      @job_type = JobType.find(params[:job_type_id])
     end
      
     if params[:category_id].blank?
-      @jobs = JobType.find_by_id(@job_type_id).jobs.find_current_and_published.paginate(:page => params[:page], :per_page => 20)
+      #Hier frage ich ab, ob es einen Job, wenn nicht, hole ich alle Jobs
+      if (@job_type.nil?)
+        @jobs = Jobs.find_current_and_published.paginate(:page => params[:page], :per_page => 20)
+      else
+        @jobs = @job_type.jobs.find_current_and_published.paginate(:page => params[:page], :per_page => 20)
+      end
     else
       @category = JobCategory.find(params[:category_id], :include => :jobs)
       @jobs = @category.jobs.find_current_and_published.paginate(:page => params[:page], :per_page => 20)

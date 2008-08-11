@@ -1,17 +1,8 @@
 <% content_for :headline do %>
-	<% @job_type_id=params[:job_type_id=] %>
-        <% case @job_type_id
-           when 2
-            @job_type = "Praktika"
-           when 1
-            @job_type = "Abschlussarbeiten"
-           when 3
-            @job_type = "Nebenjobs"
-           when 4
-            @job_type = "Berufseinstieg"
-           end %>
-        <%= @job_type %>
+    <%= @job_type.title unless (@job_type.nil?) %>
 <% end %>
+
+
 
 <% content_for :footer_left do %>
 <%= link_to image_tag("wiwi/icons/rss-feed.gif", :alt => "Atom-Feed")+" Atom-Feed", formatted_list_jobs_path(:atom) %>
