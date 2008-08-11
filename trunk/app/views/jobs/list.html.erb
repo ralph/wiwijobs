@@ -1,5 +1,16 @@
 <% content_for :headline do %>
-	JOB_ID_TITLE   <% params[:job_type_id] %>
+	<% @job_type_id=params[:job_type_id=] %>
+        <% case @job_type_id
+           when 2
+            @job_type = "Praktika"
+           when 1
+            @job_type = "Abschlussarbeiten"
+           when 3
+            @job_type = "Nebenjobs"
+           when 4
+            @job_type = "Berufseinstieg"
+           end %>
+        <%= @job_type %>
 <% end %>
 
 <% content_for :footer_left do %>
