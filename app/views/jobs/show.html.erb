@@ -4,26 +4,28 @@
 
 <div id="text-left" class="einspaltig">
 	<p><strong>Unternehmen:</strong> <%= @job.company %></p>
-	<%= @job.description %>
-	<%- unless @job.contact_data.blank? -%><strong>Kontaktdaten:<br /></strong><%= @job.contact_data %><%- end -%>
-	<%- unless @job.place.blank? -%><strong>Ort:</strong> <%= @job.place %><%- end -%>
-	<%- unless @job.qualification.blank? -%><br /><strong>Erforderliche Qualifikationen: </strong><%= @job.qualification %><%- end -%>
-	<%- unless @job.salary.blank? -%><p>Es wird eine Entlohnung angeboten.</p><%- end -%>
-	<%- unless @job.start_time.blank? -%><br /><strong>Beginn:</strong> <%= @job.start_time.to_s(:noday) %><%- end -%>
-	<%- unless @job.end_time.blank? -%><br /><strong>Ende:</strong> <%= @job.end_time %><%- end -%>
-	<p><strong>Kategorien:</strong> <%= @job.categories.collect{|category|link_to(category.title, {:action => "list", :category_id => category.id})}.to_sentence %></p>
-	
+        <p>&nbsp;</p>
+        <p><strong>Kurzbeschreibung:</strong><%= @job.description %></p>
+        <p>&nbsp;</p>
+        <p><%- unless @job.contact_data.blank? -%><strong>Kontaktdaten: </strong><%= @job.contact_data %><%- end -%></p>
+        <p>&nbsp;</p>
+        <p><%- unless @job.place.blank? -%><strong>Ort:</strong> <%= @job.place %><%- end -%></p>
+        <p><%- unless @job.qualification.blank? -%> <strong>Erforderliche Qualifikationen: </strong><%= @job.qualification %><%- end -%></p>
+        <p><%- unless @job.salary.blank? -%><strong>Entlohnung:</strong> Es wird eine Entlohnung angeboten.<%- end -%></p>
+        <p><%- unless @job.start_time.blank? -%> <strong>Beginn:</strong> <%= @job.start_time.to_s(:noday) %><%- end -%></p>
 	<%- if @job.attachment: -%>
-    <strong>Stellenausschreibung herunterladen:</strong> <%= link_to(@job.attachment.filename, @job.attachment.public_filename) %>
+        <p>&nbsp;</p>        
+        <strong>Stellenausschreibung herunterladen:</strong> <%= link_to(@job.attachment.filename, @job.attachment.public_filename) %>
 	<%- end -%>
-
-	<p>
+        <p>&nbsp;</p>
+        <p><strong>Kategorien:</strong> <%= @job.categories.collect{|category|link_to(category.title, {:action => "list", :category_id => category.id})}.to_sentence %></p>
+        <p>&nbsp;</p>
+	<p><div style="font-size:7pt;line-height:8pt">
 		Eingestellt von <%= @job.author.name %> am <%= @job.published_at.to_s(:long) %>.
 		<%- if @job.author != @job.last_editor: -%>
 		Zuletzt geändert von <%= @job.last_editor.name %> am <%= @job.updated_at.to_s(:long) %>.
-		<%- end -%>
-		<br />
+		<%- end -%> 
 		Dieses Angebot wird am <%= @job.published_until.to_s(:long) %> automatisch aus dem System entfernt. 
-	</p>
+            </div></p>
 	<div class="clearall" style="clear:both;"></div>																																								 	
 </div><!-- #text-left end -->
