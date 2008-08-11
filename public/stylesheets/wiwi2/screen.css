@@ -450,6 +450,7 @@ a.link_333:hover{
 	font-size: 0.68em;
 	line-height: 14pt;
 }
+
 /*#main div.center_column div.text div h3{
 	font-size: 100%;
 }
@@ -503,7 +504,7 @@ a.link_333:hover{
 	padding-left: 0px;
 }
 #main div.center_column div div p a {
-	background-position: left 5px;
+	background-position: left 2px;
 }
 #main div.center_column div div p a.bildlink{
 	background-image: none;
