@@ -53,8 +53,12 @@
                     <div class="left_column_rowspan bc_a7a5a5 fc_fff">
               
                             <ul id="mainmenu">
-							<li><%= link_to "Übersicht", index_url %></li>
-							<li><%= link_to "Praktika", list_intern_jobs_path %></li>
+               							<li><%= link_to "Übersicht", index_url %></li>
+                            <%- for job_type in JobType.find(:all) -%>
+                    				  <li><%= link_to job_type.title , list_job_type_jobs_path(job_type) %> </li>
+                  				  <%- end -%>
+              <!-- Hey Seb, die hier nach koennten eigentlich weg -->
+							<li><%= link_to "Praktika", list_job_type_jobs_path(JobType.find(:first)) %></li>
                                                         <li><%= link_to "Nebenjobs", list_student_jobs_path %></li>
                                                         <li><%= link_to "Abschlussarbeiten", list_degree_jobs_path %></li>
                                                         <li><%= link_to "Berufseinstieg", list_graduate_jobs_path %></li>

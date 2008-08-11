@@ -8,6 +8,10 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :jobs, :member => { :publish => :put, :unpublish => :put }, :collection => { :list => :get, :list_degree => :get, :list_intern => :get , :list_graduate => :get, :list_student => :get,  :home => :get }
   map.resources :job_events, :collection => { :list => :get }
 
+	map.resources :job_type do |genres|
+    genres.resources :jobs, :collection => { :list => :get }
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
