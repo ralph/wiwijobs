@@ -5,10 +5,10 @@ class CreateJobTypes < ActiveRecord::Migration
       t.timestamps
     end
     
-    JobType.create(:title => "Abschlussarbeit")
-    JobType.create(:title => "Praktikum")
+    JobType.create(:title => "Praktika")
+    JobType.create(:title => "Nebenjobs")
+    JobType.create(:title => "Abschlussarbeiten")
     JobType.create(:title => "Berufseinstieg")
-    JobType.create(:title => "Nebenjob")
   end
 
   def self.down
