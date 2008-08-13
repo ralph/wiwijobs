@@ -48,7 +48,12 @@ class JobsController < ApplicationController
       end
     else
       @category = JobCategory.find(params[:category_id], :include => :jobs)
-      @jobs = @category.jobs.find_current_and_published.paginate(:page => params[:page], :per_page => 20)
+      unless (@job_type.nil?)
+        @jobs = @category.jobs.find_current_and_published_by_job_type_id(:job_type_id=>params[:job_type_id]).paginate(:page => params[:page], :per_page => 20)
+      else      
+        @jobs = @category.jobs.find_current_and_published.paginate(:page => params[:page], :per_page => 20)
+      end
+
     end
 
     respond_to do |format|

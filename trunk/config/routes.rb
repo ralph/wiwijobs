@@ -5,12 +5,18 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :job_links, :collection => { :list => :get }
   map.resources :news_items, :collection => { :internal => :get, :job => :get, :list => :get }
   map.resources :users, :new => { :update_user_type_specific_fields => :post }, :collection => { :students => :get }
-  map.resources :jobs, :member => { :publish => :put, :unpublish => :put }, :collection => { :list => :get, :list_degree => :get, :list_intern => :get , :list_graduate => :get, :list_student => :get,  :home => :get }
+  map.resources :jobs, :member => { :publish => :put, :unpublish => :put }, :collection => { :list => :get, :home => :get }
   map.resources :job_events, :collection => { :list => :get }
 
-	map.resources :job_type do |genres|
-    genres.resources :jobs, :collection => { :list => :get }
+	map.resources :job_type do |job_type|
+    job_type.resources :jobs, :collection => { :list => :get }
   end
+  
+ # map.resources :job_category do |job_category| 
+  #  job_category.resources :job_type do |job_type|
+   #   job_type.resources :jobs, :collection => { :list => :get }
+    #end
+  #end
 
   # The priority is based upon order of creation: first created -> highest priority.
 
