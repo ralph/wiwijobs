@@ -15,7 +15,7 @@
         <p><%- unless @job.start_time.blank? -%> <strong>Beginn:</strong> <%= @job.start_time.to_s(:noday) %><%- end -%></p>
 	<%- if @job.attachment: -%>
         <p>&nbsp;</p>        
-        <strong>Stellenausschreibung herunterladen:</strong> <%= link_to(@job.attachment.filename, @job.attachment.public_filename) %>
+        <strong>Stellenausschreibung herunterladen:</strong> <%= image_tag("/stylesheets/wiwi2/link.gif") + link_to(@job.attachment.filename, @job.attachment.public_filename) %>
 	<%- end -%>
         <p>&nbsp;</p>
         <p><strong>Kategorien:</strong> <%= @job.categories.collect{|category|link_to(category.title, {:action => "list", :category_id => category.id})}.to_sentence %></p>

@@ -8,7 +8,7 @@
 	<meta name="author" content="Wirtschaftswissenschaftliche Fakultät der Universität Münster" />
 	<meta name="robots" content="all" />
 	<%= stylesheet_link_tag "wiwi2/screen", :media => "screen", :title => "WWU Bildschirm-Ansicht" %>
-	<link rel="alternate stylesheet" href="<%= stylesheet_path "wiwi/print" %>" type="text/css" media="screen" title="Druckvorschau" />
+	<link rel="alternate stylesheet" href="<%= stylesheet_path "wiwi2/print" %>" type="text/css" media="screen" title="Druckvorschau" />
 	<%= stylesheet_link_tag "wiwi2/print", :media => "print" %>
 	<link rel="shortcut icon" href="http://www1.wiwi.uni-muenster.de/fakultaet/favicon.ico" type="image/x-icon" />
 	<%= auto_discovery_link_tag(:atom, formatted_list_jobs_url(:atom)) %>
@@ -27,13 +27,13 @@
         <div id="site">
             <div id="head" class="bc_fff">
                 <div id="head_top">
-                    <div class="left_column">
+                    <div class="left_column noprint">
                         <a href="http://www.uni-muenster.de"><img src="/stylesheets/wiwi2/wwu_logo_left.gif" /></a>
                     </div>
-                    <div class="center_column">
+                    <div class="center_column noprint">
 <table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td>
 <a href="http://www.uni-muenster.de"><img src="/stylesheets/wiwi2/wwu_logo_right.gif" /></a></td>
-<td align="right">                    <img src="/stylesheets/wiwi2/logo_jobs.gif" align="right"/></td></tr></table>
+<td align="right">                   <a href="/"><img src="/stylesheets/wiwi2/logo_jobs.gif" align="right"/></a></td></tr></table>
                     </div>
                     <div class="right_column">
                    
@@ -48,38 +48,25 @@
                     <div class="center_column">
                         
                     </div>
-                    <div class="right_column bc_prim fc_fff">
+                    <div class="right_column bc_prim fc_fff noprint">
                         <a href="http://www.wiwi.uni-muenster.de/"><img src="/stylesheets/wiwi2/wiwi_logo_deutsch.gif" /></a>                    </div>
-                    <div class="left_column_rowspan bc_a7a5a5 fc_fff">
+                    <div class="left_column_rowspan bc_a7a5a5 fc_fff noprint">
               
                             <ul id="mainmenu">
                							<li><%= link_to "Übersicht", index_url %></li>
-                            <%- for job_type in JobType.find(:all) -%>
-                    				  <li><%= link_to job_type.title , list_job_type_jobs_path(job_type) %> </li>
-                  				  <%- end -%>
-              <!-- Hey Seb, die hier nach koennten eigentlich weg -->
-							<li><%= link_to "Kontakt für Unternehmen", contact_path %></li>
+                                                                <li><%= link_to "Praktikum",  list_job_type_jobs_path(2) %></li>
+                                                                <li><%= link_to "Nebenjob", list_job_type_jobs_path(4) %></li>
+                                                                <li><%= link_to "Abschlussarbeit", list_job_type_jobs_path(1) %></li>
+                                                                <li><%= link_to "Berufseinstieg", list_job_type_jobs_path(3) %></li>
+                                                                <% # - for job_type in JobType.find(:all) -%>
+                                                                <% # = link_to job_type.title , list_job_type_jobs_path(job_type) %> 
+                                                                <%  #- end -%>
+
+             							<li><%= link_to "Kontakt für Unternehmen", contact_path %></li>
                                                 </ul>
                    
                     </div><div class="clear"></div>
                 </div>
-<div class="clear"></div>
-            <!--    <div id="head_bottom" class="bc_prim fc_fff">
-                    <div class="left_column"><a name="mainmenu"></a>
-
-                        <ul>
-                           	<li><a  href="/fakultaet/studium/">Studieren</a></li>
-							<li><a  href="/fakultaet/forschung/">Forschen</a></li>
-							<li><a  href="/fakultaet/organisation/">Organisation</a></li>
-							<li><a  href="/fakultaet/praxis/">Praxis</a></li>
-							<li><a  href="/fakultaet/international/">International</a></li>
-
-							<li><a  href="/fakultaet/initiativen/">Initiativen</a></li>
-							<li><a  href="/fakultaet/medien/">Medien</a></li>
-							<li><a  href="/fakultaet/service/">Service</a></li>
-                        </ul>
-                        <a class='english language' href='?sprache=eng'PHPSESSID=89b8c05e119e9e295cc33663e58a7eef"><img src='/stylesheets/wiwi2/lang_flag_en.gif' /></a>                    </div><div class="clear"></div>
-                </div>-->
 <div class="clear"></div>
 
             </div>
@@ -87,7 +74,7 @@
             <div id="main" class="fc_333 bc_fff">
                 <div class="left_column bc_none">
                 	<a name="submenu"></a>
-						<h2 class="invisible">Themennavigation</h2>
+						<h2 class="invisible noprint">Themennavigation</h2>
 													<p class="kontakt">
                         	<strong>Wirtschaftswissenschaftliche Fakult&auml;t der Universit&auml;t M&uuml;nster</strong><br />
 
@@ -95,7 +82,8 @@
                         	D-48143 M&uuml;nster<br />
                         	<a href="mailto:info@wiwi.uni-muenster.de" class="mail">info@wiwi.uni-muenster.de</a>
 							</p>
-						                        																																										                	<div class="banner">
+						        
+                                                        <div class="banner noprint">
                     					<%= image_tag "wiwi/fakultaet/banner/cdclogo.gif", :align => "center" %> <br />
 
 							<!--<br />
@@ -106,15 +94,12 @@
 							<a href="/fakultaet/BCM/index.php"><img src="/stylesheets/wiwi2/bcm.gif" height="150" width="160" alt="Logo der Messe BusinessContacts Münster 2008" name="rankings" /></a>-->
                                                         
                                                     </div>
-                    <ul class="service">
+                    <ul class="service noprint">
                         <li><a class="hompage" href="/">Startseite</a></li>
 
-                        <li><a class="hompage" href="/contact">Kontakt</a></li>
+                        <li><a class="kontakt" href="/contact">Kontakt</a></li>
                      </ul>
                 </div>
-<p id="einrichtungsbezeichnung">Wirtschaftswissenschaftliche Fakult&auml;t der Universit&auml;t M&uuml;nster</p>
-
-
 <!-- Beginn Main Content -->
 <div class="center_column bc_none">
 
@@ -146,7 +131,7 @@
 		<li><a href="/fakultaet/organisation/betriebswirtschaftslehre/index.php">Betriebs&shy;wirtschaftslehre</a></li><li><a href="/fakultaet/organisation/volkswirtschaftslehre/index.php">Volks&shy;wirtschaftslehre</a></li><li><a href="/fakultaet/organisation/wirtschaftsinformatik/index.php">Wirtschafts&shy;informatik</a></li><li><a href="/fakultaet/organisation/oekonomischebildung/index.php">Ökonomische Bildung</a></li>	</ul>
 </div>-->
 
-<div class="banner_right">
+<div class="banner_right noprint">
 <p><h2>In Kooperation mit:</h2></p>
      <%= link_to image_tag("wiwi/fs_wiwi.gif"), "http://www.wi.uni-muenster.de/fs/" %><br /><br />
      <%= link_to image_tag("wiwi/fakultaet/banner/alumnium.gif"), "http://www.alumnium.de/" %><br /><br />
