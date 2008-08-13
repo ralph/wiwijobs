@@ -6,7 +6,8 @@
         <h4>
           <%= public_job.company %> | 
           <%= link_to image_tag("/stylesheets/wiwi2/link.gif")+" Details anzeigen", job_path(public_job), :title => "Details anzeigen" %>
-          <%= " | "+ image_tag("/stylesheets/wiwi2/link_sek.gif") + link_to("Download", public_job.attachment.public_filename) if public_job.attachment %>
+          <%= " | " if public_job.attachment %>
+          <%= link_to image_tag("/stylesheets/wiwi2/link.gif")+" Download", public_job.attachment.public_filename if public_job.attachment %>
           | Vom <%=h public_job.created_at.to_s(:long) %> 
         </h4>
 </p>
