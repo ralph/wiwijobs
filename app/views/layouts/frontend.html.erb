@@ -54,13 +54,9 @@
               
                             <ul id="mainmenu">
                							<li><%= link_to "Übersicht", index_url %></li>
-                                                                <li><%= link_to "Praktikum",  list_job_type_jobs_path(2) %></li>
-                                                                <li><%= link_to "Nebenjob", list_job_type_jobs_path(4) %></li>
-                                                                <li><%= link_to "Abschlussarbeit", list_job_type_jobs_path(1) %></li>
-                                                                <li><%= link_to "Berufseinstieg", list_job_type_jobs_path(3) %></li>
-                                                                <% # - for job_type in JobType.find(:all) -%>
-                                                                <% # = link_to job_type.title , list_job_type_jobs_path(job_type) %> 
-                                                                <%  #- end -%>
+                                                                <%- for job_type in JobType.find(:all) -%>
+                                                                <li><%= link_to job_type.title , list_job_type_jobs_path(job_type) %></li>
+                                                                <%- end -%>
 
              							<li><%= link_to "Kontakt für Unternehmen", contact_path %></li>
                                                 </ul>
