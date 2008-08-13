@@ -1,5 +1,5 @@
 /*
-CODE:		Livingpage® für die Wirtschaftswissenschaftliche Fakultät der Universität Münster
+CODE:		Livingpageï¿½ fï¿½r die Wirtschaftswissenschaftliche Fakultï¿½t der Universitï¿½t Mï¿½nster
 REVISION:	1.0
 LAST CHANGE:	09.04.06 bm@livingpage.com
 FUNCTION:	In dieser CSS wird die Druckausgabe bestimmt
@@ -8,12 +8,12 @@ CSS nach Typen sortiert. Was wozu gehoert steht im Kommentar davor.
 
 Getestet auf folgenden Plattformen und Browsern:
 Mac OS X: 
-für gut befunden: Firefox 1.04, Safari 1.3.1
+fï¿½r gut befunden: Firefox 1.04, Safari 1.3.1
 fehlerhaft: MSIE 5.2.3
 Windows XP: 
-für gut befunden: MSIE 5.0, 5.5, 6.0, Firefox 1.5.0.1, Opera 8.5
+fï¿½r gut befunden: MSIE 5.0, 5.5, 6.0, Firefox 1.5.0.1, Opera 8.5
 Linux:
-für gut befunden: Linux: Firefox 1.0.7, Konqueror 3.2.1 
+fï¿½r gut befunden: Linux: Firefox 1.0.7, Konqueror 3.2.1 
 Nicht geeignet fuer NN4.x. (any version, any platform)
 
 Weitere Erklaerungen gibt es bei w3.org/TR/REC-CSS2/
@@ -34,7 +34,7 @@ body {
 form *,
 h1, 
 h3, 
-h4, 
+h4,
 h5, 
 h6, 
 li, 
@@ -146,7 +146,7 @@ padding-top: 4pt;
 	font-size: 80%; line-height: 14pt;
 }
 
-@media print { /* Ab hier wird die Darstellung für den Ausdruck festgelegt */
+@media print { /* Ab hier wird die Darstellung fï¿½r den Ausdruck festgelegt */
 
 /* ------------------------------------------------------------------------------- */
 /* --------------------------- Alles, was ausgeblendet wird ---------------------- */
@@ -163,6 +163,7 @@ ul#globalenavigation2,
 #mainnavigation,
 #right,
 #footer,
+#left_column,
 .noprint {
 display: none;
 }
