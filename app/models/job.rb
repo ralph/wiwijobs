@@ -109,5 +109,11 @@ class Job < ActiveRecord::Base
       find_ordered(:conditions => "published_until >= NOW() AND published_at <= NOW()")
     end
   end
+
+  def self.find_current_and_published_by_job_type_id(job_type_id=0, options = {})
+    with_scope :find => options do
+      find_ordered(:conditions => "published_until >= NOW() AND published_at <= NOW() AND job_type_id = " + job_type_id[:job_type_id])
+    end
+  end
   
 end

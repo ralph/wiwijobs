@@ -11,8 +11,8 @@
 <div id="text-left" class="einspaltig">
 
 	<div class="clearall" style="clear:both;"></div>																																								 
-	<h2>Die letzten Angebote aus dem Bereich: <%= collection_select :category, :id, JobCategory.find(:all), :id, :title_with_number_of_jobs, {:prompt => "alle"}, { :id => "jobs_filter" } %></h2>
-	<%= observe_field :jobs_filter, :url => list_jobs_path, :with => "category_id", :method => :get %>
+	<h2>Die letzten Angebote aus dem Bereich: <%= collection_select :category, :id, JobCategory.find(:all), :id, :title, {:prompt => "alle"}, { :id => "jobs_filter" } %></h2>
+	<%= observe_field :jobs_filter, :url => list_job_type_jobs_path(@job_type), :with => "category_id", :method => :get %>
         <p></p>
 	<div id="job_list">
 		<%= render :partial => "public_job", :collection => @jobs %>
