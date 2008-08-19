@@ -411,6 +411,7 @@ a.link_333:hover{
 	font-size:8pt;
 	line-height:10pt;
 	font-weight:700;
+        padding: 6px 0px 0px 0px;
 }
 #main div.center_column h3 a {
 	color: #000;
@@ -426,7 +427,7 @@ a.link_333:hover{
 #main div.center_column h4 {
 	font-weight:normal;
 	font-size:8pt;
-        padding: 0px 0px 8px 13px;
+        padding: 0px 0px 0px 13px;
 }
 #main div.center_column h4 a {
 	color: #000;
@@ -814,4 +815,42 @@ a.link_333:hover{
 
 #job_list {
     font-size:0.56em;
+}
+
+/*--- Pagination ---*/
+
+
+
+.pagination {
+        padding: 3px;
+        margin: 3px;
+}
+.pagination a {
+        padding: 2px 5px 2px 5px;
+        margin: 2px;
+        border: 1px solid #008898;
+        text-decoration: none;
+        color: #053769;
+        font-size: 7pt;
+}
+.pagination a:hover, .pagination a:active {
+        border: 1px solid #008898;
+        color: #000;
+        font-size: 7pt;
+}
+.pagination span.current {
+        padding: 2px 5px 2px 5px;
+        margin: 2px;
+        border: 1px solid #008898;
+        font-weight: bold;
+        background-color: #008898;
+        color: #FFF;
+        font-size: 7pt;
+}
+.pagination span.disabled {
+        padding: 2px 5px 2px 5px;
+        margin: 2px;
+        border: 1px dashed gray;
+        color: gray;
+        font-size: 7pt;
 }
