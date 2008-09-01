@@ -486,10 +486,10 @@ a.link_333:hover{
 #main div.center_column div div p a, #main div.center_column div div ul li a {
 	display: inline-block;
 	color: #008898;
-	background-image: url(/stylesheets/wiwi2/link.gif);
+	/*background-image: url(/stylesheets/wiwi2/link.gif);
 	background-position: left 5px;
-	background-repeat:no-repeat;
-	padding-left: 11px;
+	background-repeat:no-repeat;*/
+	/*padding-left: 11px;*/
 }
 #main div.center_column div div ul {
 	margin-left: 40px;
