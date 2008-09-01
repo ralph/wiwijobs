@@ -411,7 +411,10 @@ a.link_333:hover{
 	font-size:8pt;
 	line-height:10pt;
 	font-weight:700;
-        padding: 6px 0px 0px 0px;
+        padding: 6px 0px 0px 13px;
+        background-image: url(/stylesheets/wiwi2/link_sek.gif);
+	background-position: 0px 8px;
+	background-repeat:no-repeat;
 }
 #main div.center_column h3 a {
 	color: #000;
@@ -427,7 +430,7 @@ a.link_333:hover{
 #main div.center_column h4 {
 	font-weight:normal;
 	font-size:8pt;
-        padding: 0px 0px 0px 13px;
+        padding: 3px 0px 0px 13px;
 }
 #main div.center_column h4 a {
 	color: #000;
